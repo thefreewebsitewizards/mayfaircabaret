@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VIP Experience - LUXE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#121212",
+                        "accent-dark": "#181611",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "md": "0.375rem",
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #f4c025 0%, #d4a015 100%)',
+                        'dark-gradient': 'linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,1) 100%)'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark luxury feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4c025; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased">
+<!-- Navigation -->
+<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="flex justify-center w-full">
+<div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
+<header class="flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">diamond</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-wide uppercase font-display">Mayfair Cabaret</h2>
+</a>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="index.html">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="entertainment.html">Entertainment</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="vip.html">VIP Service</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="gallery.html">Gallery</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
+</nav>
+<a href="pricing.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)]">
+                            Book a Table
+                        </a>
+</div>
+<div class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Luxury dark club interior with dim lighting and plush seating" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA81FP0HR56hEisjUSbx68U-04Z_fATu3bvNeNUisZkRCGXvR6PooqqKfbLcq9wGVcF1QQCNNRsvp3VuOEYFl3fpJbZStrhZM3n_GOeASKTE-PAZgqx1vO4DnCcovCbjADyCSIh2VjPhYCFl3utZJwlYdyfi74adrjr0q6OX1gmQLcxG4z7CGTHkRUOmq_VE4jX3zFfwR88HxZAyJQcfCSM8i38jetQa90r5C_daNUihd9xOIAi8fOt1ZjKqrrJAOOAq6EQnOBoebNL");'>
+</div>
+<div class="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a]"></div>
+<!-- Content -->
+<div class="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
+<h1 class="font-light tracking-[0.1em] text-primary mb-4 text-lg md:text-xl uppercase animate-fade-in-up">The VIP Standard</h1>
+<h2 class="max-w-4xl text-5xl font-medium leading-tight text-white md:text-7xl lg:text-8xl tracking-tight mb-8 drop-shadow-2xl">
+                Transcending <br/><span class="font-thin italic text-white/90">Nightlife</span>
+</h2>
+<p class="max-w-2xl text-lg font-light leading-relaxed text-gray-300 md:text-xl mb-10">
+                Unmatched privacy, premium spirits, and the best views in the house. <br class="hidden md:block"/>Reserve your sanctuary in the heart of the night.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="contact.html" class="group relative flex h-12 min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-primary px-8 text-background-dark text-sm font-bold tracking-widest uppercase transition-all hover:bg-white hover:text-background-dark">
+<span class="relative z-10">Enquire About VIP</span>
+<div class="absolute inset-0 -z-10 translate-y-[100%] bg-white transition-transform duration-300 group-hover:translate-y-0"></div>
+</a>
+<a href="drinks.html" class="group flex h-12 min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-md border border-white/20 bg-transparent px-8 text-white text-sm font-bold tracking-widest uppercase transition-all hover:border-primary hover:text-primary backdrop-blur-sm">
+<span>View Bottle Menu</span>
+</a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce text-white/50">
+<span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Intro Text -->
+<section class="relative bg-background-dark py-24 px-6">
+<div class="mx-auto max-w-4xl text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">crown</span>
+<h3 class="mb-6 text-3xl font-light text-white md:text-4xl tracking-wide">Exclusivity Redefined</h3>
+<div class="h-px w-24 bg-primary/50 mx-auto mb-8"></div>
+<p class="text-lg leading-relaxed text-gray-400 font-light">
+                For those who demand more than just a seat at the table. Our VIP experience is curated for the discerning few who seek privacy, impeccable service, and an atmosphere of unbridled luxury. From the moment you arrive, your night is crafted to perfection.
+            </p>
+</div>
+</section>
+<!-- Amenities Grid -->
+<section class="bg-surface-dark py-20 lg:py-32">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<div class="mb-16 md:flex md:items-end md:justify-between">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-bold text-white md:text-5xl tracking-tight mb-4">The Royal Treatment</h2>
+<p class="text-gray-400 text-lg">Curated services designed for the exceptional.</p>
+</div>
+<div class="mt-8 md:mt-0">
+<a class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm font-bold uppercase tracking-widest" href="vip.html">
+                        Full Amenity List <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid gap-8 md:grid-cols-3">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden rounded-md bg-accent-dark border border-white/5 hover:border-primary/50 transition-colors duration-500">
+<div class="aspect-[4/3] w-full overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Private luxury suite with leather sofas and ambient lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYVnguE-P5A1cO4GLP4iq_qXYdIKfA7hWg1nqqaxZdr29kaepnFZAJxXx3b5HmweSDJHOGgWEp98sU3UsPQZh0hU1NF3r_dqM7nbXEy784hGD3DjQqyTPmjqLaphoFkERv-hd7gdLxbftzmfgIT32HHnHvD8VeeZyXkAYDjx_dItAmzWL2oBgI-jNwdbYgDOoqbHM_FaeF2tXgE5fTVTbMZiZ4ntIKA253TgicYGb0J79RIgJ_1JOJWBUZ5qIp3lzYcez4fNerm7LF");'>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8">
+<div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary backdrop-blur-md">
+<span class="material-symbols-outlined">meeting_room</span>
+</div>
+<h3 class="mb-2 text-xl font-bold text-white">The Private Suites</h3>
+<p class="text-sm leading-relaxed text-gray-300">Intimate settings for discreet entertainment and personal attention, away from the crowd.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden rounded-md bg-accent-dark border border-white/5 hover:border-primary/50 transition-colors duration-500">
+<div class="aspect-[4/3] w-full overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Premium champagne bottles in an ice bucket with sparklers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABmRYMOYnOHsxmrZK7AQ_5VCK3FxXQGfFgmQnVzHOT-CSvwNg6bXZa20oFFLWvjyGDpFEy9sAI252vbR-wX7XTmVg9YNPCT8WUBIQgmh0AoI3fmFG2ConTsH1pSmMq0Q2yVCF7YuMdIFYSVEgOs6s6mA9HyLiQgl6sNsU-Ezecx6u-nvLsFSx0qu6meEEKnYTZ83hNcofLvp9FvkMWadbkkB-0nv8ZaaBOtD3Wn1bdk0uM7VIKf8t3BbRxkJKtA78W-elJ1-ADuGma");'>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8">
+<div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary backdrop-blur-md">
+<span class="material-symbols-outlined">liquor</span>
+</div>
+<h3 class="mb-2 text-xl font-bold text-white">Bottle Service</h3>
+<p class="text-sm leading-relaxed text-gray-300">A curated selection of the world's finest champagnes and rare spirits delivered to your table.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden rounded-md bg-accent-dark border border-white/5 hover:border-primary/50 transition-colors duration-500">
+<div class="aspect-[4/3] w-full overflow-hidden">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="View from a balcony overlooking a dimly lit club floor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCguOIg9Tz9_Hg7IGQRKLJODRZ35xwA5-ZRgifzfgSqMRvB3vWW76xEVCGXJb2KJE3E-dXeRoOJIMQJbGipVCr09gZoeqyXc7Z3aRK7c7pcZwy-he0paRwQZfGFeJt1S62ivMwleThscKxMCEtNw1fCdYUO04bKXSy_STUCXOVrcH6p85aiaXQM77Y_DMkZ1DM4ljTZJ0rtC1UZbXsAcJZF1UnYhV25p8sn4cHN1xo_Tjc4g5bJRhyjBKevTYaVXUEPtIsTwlIluoRY");'>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-8">
+<div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary backdrop-blur-md">
+<span class="material-symbols-outlined">balcony</span>
+</div>
+<h3 class="mb-2 text-xl font-bold text-white">Balcony Views</h3>
+<p class="text-sm leading-relaxed text-gray-300">Survey the floor from the comfort of our exclusive mezzanine with unobstructed views.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Experience Timeline -->
+<section class="bg-background-dark py-24 relative overflow-hidden">
+<!-- Abstract gold swirl background element -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-white md:text-4xl tracking-tight">Your Night, Curated</h2>
+<p class="mt-4 text-gray-400">A seamless journey from arrival to dawn.</p>
+</div>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 md:left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent -translate-x-1/2 hidden md:block"></div>
+<div class="space-y-12 md:space-y-24">
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="md:w-1/2 text-right order-2 md:order-1">
+<h3 class="text-2xl font-bold text-white mb-2">Private Arrival</h3>
+<p class="text-gray-400">Bypass the queue with our dedicated VIP entrance. Your host will greet you upon arrival and escort you directly to your sanctuary.</p>
+</div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-background-dark hidden md:block"></div>
+<div class="md:w-1/2 order-1 md:order-2 pl-12 md:pl-0 relative">
+<!-- Mobile Line -->
+<div class="absolute left-4 top-0 h-full w-px bg-white/10 -translate-x-1/2 md:hidden"></div>
+<div class="absolute left-4 top-0 size-3 rounded-full bg-primary -translate-x-1/2 md:hidden"></div>
+<div class="aspect-video w-full rounded-md bg-cover bg-center shadow-2xl opacity-80 hover:opacity-100 transition-opacity" data-alt="Luxury car pulling up to a private entrance at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAC8BGgnswYCspJKeufahuu-LytgUQTBailr1q0EflOY2U-Z-PmRoKDp6aJ5VzUZGTpVCqBeCKrCbXoG7G0CAGrxgNZG0Wke98YPY0payTECkRDZj9i5rB9ozjb6M9KoHWfc0TF_7UlBhbe89tJKaXMCe_HqmQKc_l7GTcc8vrjxvIxKvjOgmb0ZhCgv8Q36wRxWLfmrgB92DYSZJXWu1skYKlPK51_aCOq2yqL_euWBD8g2BDyOKB3J3YhblCrjqPjzIC2C-Po2HqR");'></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="md:w-1/2 order-2">
+<!-- Mobile Line -->
+<div class="absolute left-4 top-0 h-full w-px bg-white/10 -translate-x-1/2 md:hidden"></div>
+<div class="absolute left-4 top-0 size-3 rounded-full bg-primary -translate-x-1/2 md:hidden"></div>
+<div class="aspect-video w-full rounded-md bg-cover bg-center shadow-2xl opacity-80 hover:opacity-100 transition-opacity" data-alt="Bartender pouring a premium cocktail in dim lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDshP0wwBZ3idyKqBm-J6LbdiOJNWhJRhcH8La5DSAAnS39rrYe3uemuMtEJcHSvoKYRE9NwjcQRvk1iouM59IaDw2jp2uSIwz_96xetlyfoiRd5A-j_yONQaONdBhtkhTQN5rc5PoFIwoVNFgxSuhJseN4YP5ZAosD8fzGGwk2K0NwxhsG0pkj2rd_naTW2rC_RnT6e5Zo-wylQn8l_hDmJ-rh9C5p3pR4jcYJu1GkCZ_giLa2DBe1oY8JtXvIMNGABHvFxrbvuVgg");'></div>
+</div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-background-dark hidden md:block"></div>
+<div class="md:w-1/2 text-left order-1 md:order-2 pl-12 md:pl-0">
+<h3 class="text-2xl font-bold text-white mb-2">Dedicated Service</h3>
+<p class="text-gray-400">A personal server is assigned exclusively to your table, ensuring your glass is never empty and your requests are met instantly.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="md:w-1/2 text-right order-2 md:order-1">
+<h3 class="text-2xl font-bold text-white mb-2">Elite Entertainment</h3>
+<p class="text-gray-400">Enjoy priority access to private dances and exclusive performances, tailored to your preferences in our secluded suites.</p>
+</div>
+<div class="absolute left-4 md:left-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-background-dark hidden md:block"></div>
+<div class="md:w-1/2 order-1 md:order-2 pl-12 md:pl-0 relative">
+<!-- Mobile Line -->
+<div class="absolute left-4 top-0 h-full w-px bg-white/10 -translate-x-1/2 md:hidden"></div>
+<div class="absolute left-4 top-0 size-3 rounded-full bg-primary -translate-x-1/2 md:hidden"></div>
+<div class="aspect-video w-full rounded-md bg-cover bg-center shadow-2xl opacity-80 hover:opacity-100 transition-opacity" data-alt="Abstract blurry silhouette of dancers on stage with colorful lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK1ZXPX0aT5PuXRyOExdnTl5mDlgY0qKclTPCoBD_wpv1O9DmRWd90DecXnhv5Ih8bXhltOtpH2haSQBEJEBh0hNILdg-eDk8Fpos0n3pJ46lZBu2papQtyVew1CWb6rgPCRF2ViHcD-o47eU-1sYI4vMpBdZH0G8AiFxz1KxGzZyKO0QPSJ3juM33dHPLWLhP3DStu8mSd3o-rraYCasyhvQfjN551a8hL7bbcrY_1odvcrKZ7-V3St6MGGjeP1Gn6USLi9qGv7vR");'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial / Social Proof -->
+<section class="bg-surface-dark py-20 border-y border-white/5">
+<div class="mx-auto max-w-4xl px-6 text-center">
+<span class="material-symbols-outlined text-6xl text-white/10 mb-6">format_quote</span>
+<p class="text-2xl md:text-3xl font-light italic text-white/90 leading-relaxed mb-8">
+                "The only place in the city where privacy is truly respected. The service is impeccable, the atmosphere electric, and the experience... unforgettable."
+            </p>
+<div class="flex items-center justify-center gap-4">
+<div class="h-px w-10 bg-primary"></div>
+<p class="text-primary font-bold uppercase tracking-widest text-sm">A. Reynolds, VIP Member</p>
+<div class="h-px w-10 bg-primary"></div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section -->
+<section class="py-24 bg-background-dark relative">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+<div class="mx-auto max-w-3xl px-6 relative z-10">
+<div class="bg-accent-dark border border-white/10 rounded-lg p-8 md:p-12 shadow-2xl">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold text-white mb-2">Request Your Reservation</h2>
+<p class="text-gray-400">Tell us about your plans. Our concierge will contact you shortly.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="name">Full Name</label>
+<input class="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="email">Email Address</label>
+<input class="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="date">Preferred Date</label>
+<input class="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white/70 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all [color-scheme:dark]" id="date" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="guests">Party Size</label>
+<select class="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="guests">
+<option>1-2 Guests</option>
+<option>3-5 Guests</option>
+<option>6-10 Guests</option>
+<option>10+ Guests (Large Party)</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="interest">Area of Interest</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="area" type="radio"/>
+<div class="rounded-md border border-white/10 bg-background-dark py-3 text-center text-sm font-medium text-gray-400 transition-all hover:bg-white/5 peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:text-primary">
+                                    Private Suite
+                                </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="area" type="radio"/>
+<div class="rounded-md border border-white/10 bg-background-dark py-3 text-center text-sm font-medium text-gray-400 transition-all hover:bg-white/5 peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:text-primary">
+                                    Main Floor VIP
+                                </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="area" type="radio"/>
+<div class="rounded-md border border-white/10 bg-background-dark py-3 text-center text-sm font-medium text-gray-400 transition-all hover:bg-white/5 peer-checked:border-primary peer-checked:bg-primary/10 peer-checked:text-primary">
+                                    Balcony
+                                </div>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-primary uppercase tracking-wider" for="requests">Special Requests</label>
+<textarea class="w-full bg-background-dark border border-white/10 rounded-md px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="requests" placeholder="Specific bottles, arrival time details, etc." rows="4"></textarea>
+</div>
+<button class="w-full rounded-md bg-primary py-4 text-center text-sm font-bold uppercase tracking-widest text-background-dark hover:bg-yellow-500 transition-colors shadow-lg shadow-primary/20" type="button">
+                        Submit Inquiry
+                    </button>
+<p class="text-center text-xs text-gray-500 mt-4">
+                        By submitting, you agree to our privacy policy. Management reserves all rights.
+                    </p>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
+</div>
+<p class="text-[#bab29c] text-sm leading-relaxed">
+                            The pinnacle of nightlife luxury. Experience the extraordinary.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span> <!-- Placeholder for social icons not in material symbols -->
+</a>
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+</div>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
+<div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
+</div>
+</div>
+<p class="text-[#bab29c] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+                         </p>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#555] text-xs">© 2024 Mayfair Cabaret. All rights reserved.</p>
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
+<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Sticky Mobile Bottom Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-background-dark/95 border-t border-white/10 p-4 md:hidden backdrop-blur-lg">
+<a href="contact.html" class="w-full rounded-md bg-primary h-12 text-center text-sm font-bold uppercase tracking-widest text-background-dark shadow-lg flex items-center justify-center">
+            Enquire About VIP
+        </a>
+</div>
+<script>
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+</script>
+</body></html>

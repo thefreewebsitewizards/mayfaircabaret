@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE - Drinks &amp; Bottle Service</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        "surface-dark": "#2c281b", // Slightly lighter for cards
+                        "border-gold": "#544e3b",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display overflow-x-hidden antialiased">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Top Navigation -->
+<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="flex justify-center w-full">
+<div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
+<header class="flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">diamond</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-wide uppercase font-display">Mayfair Cabaret</h2>
+</a>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="index.html">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="entertainment.html">Entertainment</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="vip.html">VIP Service</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="gallery.html">Gallery</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
+</nav>
+<a href="pricing.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)]">
+                            Book a Table
+                        </a>
+</div>
+<div class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="relative w-full">
+<div class="flex flex-col items-center justify-center min-h-[600px] bg-cover bg-center bg-no-repeat relative" data-alt="Abstract luxurious dark liquid splash with gold highlights" style='background-image: linear-gradient(to bottom, rgba(34, 30, 16, 0.4) 0%, rgba(34, 30, 16, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMBRTGss6RQOU6XDiPMEw74lP0x7t1xdL32n0uo9wPIz1FeuhCoU3_HLPUQD-GPMYYj6PzibK9Pf7bVSY6Z_BWl1q5Dn43Kne89pJGlQnSZ5rlGB52R6kSK8aO4JGPqdTTanAi3-8sSdhAar4MgutVQmz72tYSyRuZxIl-XF5TbwLJbiv9_dZosrLgyX7JZijoSCHTy9xYOSXyfr6DebWa2s6a5UttiWC-45Ot7yNkNTUBAVI-lelFxcnmPFcYT76UKptT1uYIX4BX");'>
+<div class="max-w-[800px] text-center px-4 relative z-10">
+<h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6 drop-shadow-xl">
+                        THE LIQUID <span class="text-primary">EXPERIENCE</span>
+</h1>
+<p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                        Unrivaled selection. Unmatched atmosphere. Elevate your night with our premium bottle service and signature cocktails.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="drinks.html" class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold uppercase tracking-wider hover:scale-105 transition-transform">
+                            View Menu
+                        </a>
+<a href="pricing.html" class="flex items-center justify-center rounded-lg h-12 px-8 bg-transparent border border-white text-white text-base font-bold uppercase tracking-wider hover:bg-white hover:text-background-dark transition-colors">
+                            Book a Table
+                        </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Current Specials -->
+<div class="flex flex-1 justify-center py-10 bg-background-dark">
+<div class="layout-content-container flex flex-col w-full max-w-[1000px] px-6">
+<div class="flex flex-col gap-10 py-10">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-primary tracking-[0.2em] text-sm font-bold uppercase">Don't Miss Out</h2>
+<h3 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+                            Happy Hour &amp; Specials
+                        </h3>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-gray-400 text-base font-normal leading-normal max-w-[720px]">
+                            Arrive early to enjoy exclusive pricing on our premium selections.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Special 1 -->
+<div class="flex gap-4 rounded-xl border border-border-gold bg-surface-dark p-6 hover:border-primary transition-colors group">
+<div class="text-primary p-3 bg-background-dark rounded-full h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-white text-xl font-bold">Half-Price House Spirits</h4>
+<p class="text-[#bab29c] text-sm leading-relaxed">
+                                    Start the night right. Enjoy 50% off all house spirits for the first two hours of opening every night.
+                                </p>
+</div>
+</div>
+<!-- Special 2 -->
+<div class="flex gap-4 rounded-xl border border-border-gold bg-surface-dark p-6 hover:border-primary transition-colors group">
+<div class="text-primary p-3 bg-background-dark rounded-full h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined text-3xl">wine_bar</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="text-white text-xl font-bold">Cocktail Hour</h4>
+<p class="text-[#bab29c] text-sm leading-relaxed">
+                                    Special pricing on our signature Spritz menu and classic cocktails until 10 PM. Perfect for sundowners.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bar Concepts -->
+<div class="flex flex-1 justify-center py-16 bg-[#1a170f]">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] px-6">
+<div class="flex flex-col gap-12">
+<div class="flex justify-between items-end border-b border-border-gold pb-6">
+<div>
+<h2 class="text-white text-3xl font-bold leading-tight tracking-tight">BAR CONCEPTS</h2>
+<p class="text-primary mt-2 text-sm font-medium tracking-wide">TWO DISTINCT EXPERIENCES UNDER ONE ROOF</p>
+</div>
+<span class="hidden md:block text-gray-500 text-sm italic">Open nightly from 8 PM</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Concept 1 -->
+<div class="flex flex-col rounded-2xl overflow-hidden bg-background-dark group">
+<div class="h-64 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Crowded energetic main bar with neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_7KeVsODDeRIIf6miYfYWQ3PODXaBSyhGVf4f5JP2rC5tXy3p7vLq1jmzjPT2HlK4KzlwPkh3uw-gXEhiH9oRDNS4c9nZ4WEedPxle-OLfy9r7ExCjAmfueUXCFs2t_GsyF7rJepvwOuaemrYTpxYUz5edzSSfFo9hjz88-aI-WXQsByiHl62cVlsG7MkGMnrGgwqHu_73ajmSR5Lp2ZHrsaRY5cXURulA5uIzz5Gn1rqqLnF_9pZ_ZDb4_ZGjW7EEQ6Q0rv4w7vO");'>
+</div>
+<div class="p-8 flex flex-col flex-1 border-x border-b border-border-gold rounded-b-2xl relative top-[-10px] bg-background-dark">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-white">THE MAIN BAR</h3>
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider">Club Access</span>
+</div>
+<p class="text-gray-400 mb-6 flex-1">
+                                    The heart of the action. Immerse yourself in the high-energy vibe of the main floor with immediate access to the stage and dance areas.
+                                </p>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-gray-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Full House Spirits Selection</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-gray-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Premium Draught Beers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Concept 2 -->
+<div class="flex flex-col rounded-2xl overflow-hidden bg-background-dark group">
+<div class="h-64 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Sophisticated cocktail bar balcony view city lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5tegmx_kXYc19ajnjsu8ZjenuqLBmE-MaCZgQfsN1-_z58WlSu4UKHSv8BYMFM1yH1UXaHPVBLqkXy3X3WfGaxgCDH7mom9bZONpKkaWlUNqr1AGuisL4RoIWVzu6asfcn8G6Fn2RcfMCkmw2ChPGdHCojSmP-2zJFCNoUGOqut7dWViNfHNsBsDYrqenA_dhr61kLps0SLOp_q71UnttXjWGGz62BvvYjpk1zP1jrpzVMC3iZZxXPREl7pu7NZEMUz6YNgyUWlqo");'>
+</div>
+<div class="p-8 flex flex-col flex-1 border-x border-b border-border-gold rounded-b-2xl relative top-[-10px] bg-background-dark">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-white">THE SKY LOUNGE</h3>
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider">Balcony View</span>
+</div>
+<p class="text-gray-400 mb-6 flex-1">
+                                    Sophistication meets scenery. Escape to our premium cocktail bar featuring a large balcony overlooking the Glitter Strip. A perfect vantage point.
+                                </p>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-gray-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Signature Spritz Menu</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-gray-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Artisan &amp; Classic Cocktails</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottle Service Highlight -->
+<div class="w-full bg-primary py-16 px-4">
+<div class="layout-content-container mx-auto flex flex-col max-w-[1000px]">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/10 border border-black/20 text-background-dark text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">star</span>
+                            VIP Experience
+                        </div>
+<h2 class="text-background-dark text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                            PREMIUM BOTTLE SERVICE
+                        </h2>
+<p class="text-background-dark/80 text-lg font-medium leading-relaxed">
+                            Elevate your evening with your own private table and dedicated host. Our bottle service packages include priority entry, your choice of premium mixers, and the best seats in the house.
+                        </p>
+<div class="flex flex-col gap-3 pt-2">
+<div class="flex items-center justify-between border-b border-black/10 pb-2">
+<span class="font-bold text-background-dark">BRONZE PACKAGE</span>
+<span class="font-medium text-background-dark/70">1 Bottle + 2 Mixers</span>
+</div>
+<div class="flex items-center justify-between border-b border-black/10 pb-2">
+<span class="font-bold text-background-dark">SILVER PACKAGE</span>
+<span class="font-medium text-background-dark/70">2 Bottles + 4 Mixers + Sparklers</span>
+</div>
+<div class="flex items-center justify-between border-b border-black/10 pb-2">
+<span class="font-bold text-background-dark">GOLD PACKAGE</span>
+<span class="font-medium text-background-dark/70">3 Premium Bottles + Unlimited Mixers</span>
+</div>
+</div>
+<button class="mt-4 flex w-full md:w-auto items-center justify-center rounded-lg h-12 px-8 bg-background-dark text-white text-base font-bold hover:bg-black transition-colors">
+                            Book Your Table Now
+                        </button>
+</div>
+<div class="flex-1 w-full relative">
+<div class="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-background-dark/20 relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Champagne bottle service with sparklers in ice bucket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUfzyU0NtMEHZbfangrqE1d-Q75RMGkEYehNFF2tsNBoFtKaE8CvOxTRyppGPq1WMcuxTQJmnooOpDv21FcjPbUAQbWUvQTJHMuKf5Bvd2o53NRvHiKWBmHYlTbrnz4MON7qI1gv6H5JvUFKPElb9k9ENHJ4KTCp7e-eJhoXbTkyuixWGrabq_l9KnayJRs0rqyE1209ms77GmGFGjVK_Y2kr6vEVxfXwTp29Zy8VFvUNGIVrpdDVhuRiUjD2hsNl_iYcIxesHEbJn"/>
+<div class="absolute bottom-6 left-6 z-20 text-white">
+<p class="text-sm font-light uppercase tracking-widest mb-1">Exclusive</p>
+<p class="text-2xl font-bold">The Royal Treatment</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Menu List -->
+<div class="flex flex-1 justify-center py-20 bg-background-dark">
+<div class="layout-content-container flex flex-col w-full max-w-[800px] px-6">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">local_bar</span>
+<h2 class="text-white text-3xl font-bold tracking-tight uppercase">Signature Sips</h2>
+<p class="text-gray-500 mt-2 italic">Complimentary artisan pretzels served for all seated guests.</p>
+</div>
+<div class="space-y-16">
+<!-- Section 1 -->
+<div>
+<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-gold pb-2 mb-6">The Spritz Collection</h3>
+<div class="grid gap-6">
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Golden Hour Spritz</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$18</span>
+</div>
+<p class="text-gray-500 text-sm">Aperol, Prosecco, passionfruit infusion, soda, gold dust.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Venetian Sunset</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$19</span>
+</div>
+<p class="text-gray-500 text-sm">Campari, blood orange, sparkling rosé, thyme garnish.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Luxe Elderflower</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$20</span>
+</div>
+<p class="text-gray-500 text-sm">St. Germain, gin, cucumber, mint, premium tonic.</p>
+</div>
+</div>
+</div>
+<!-- Section 2 -->
+<div>
+<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-gold pb-2 mb-6">House Signatures</h3>
+<div class="grid gap-6">
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Midnight Manhattan</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$22</span>
+</div>
+<p class="text-gray-500 text-sm">Rye whiskey, sweet vermouth, chocolate bitters, luxardo cherry.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">The Showgirl</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$24</span>
+</div>
+<p class="text-gray-500 text-sm">Vodka, raspberry liqueur, pineapple, champagne foam.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Smoked Old Fashioned</h4>
+<div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
+<span class="text-primary font-bold">$25</span>
+</div>
+<p class="text-gray-500 text-sm">Bourbon, maple syrup, angostura bitters, hickory smoke.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 p-6 border border-border-gold rounded-lg bg-surface-dark text-center">
+<p class="text-gray-400 text-sm">
+                        Please inform your server of any allergies. <br/>
+                        A 15% service charge is added to tables of 6 or more.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
+</div>
+<p class="text-[#bab29c] text-sm leading-relaxed">
+                            The pinnacle of nightlife luxury. Experience the extraordinary.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span> <!-- Placeholder for social icons not in material symbols -->
+</a>
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+</div>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
+<div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
+</div>
+</div>
+<p class="text-[#bab29c] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+                         </p>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#555] text-xs">© 2024 Mayfair Cabaret. All rights reserved.</p>
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
+<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 z-50 rounded-full bg-primary hover:bg-white text-background-dark p-4 shadow-xl transition-all hover:scale-110">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</button>
+</div>
+<script>
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+</script>
+</body></html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Entertainment - The Club</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        "surface-dark": "#2c281b", // Slightly lighter dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221e10; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393528; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4c025; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181611] dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="flex justify-center w-full">
+<div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
+<header class="flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">diamond</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-wide uppercase font-display">Mayfair Cabaret</h2>
+</a>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="index.html">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="entertainment.html">Entertainment</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="vip.html">VIP Service</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="gallery.html">Gallery</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
+</nav>
+<a href="pricing.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)]">
+                            Book a Table
+                        </a>
+</div>
+<div class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+</div>
+<main class="flex flex-col w-full overflow-x-hidden">
+<!-- Hero Section -->
+<div class="relative w-full h-[85vh] flex items-center justify-center">
+<!-- Background Image with Gradient -->
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="Abstract silhouette of a dancer in dramatic golden lighting" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(34, 30, 16, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBakQOfQrMupNTaBJWXIEiNhhxurR88U5z8dYc2Wcf7Zl8xGxSixH7xbwZGZfU0YamCP3JCkHdtwYr_jbbad_5rfBAvKvoxvZR7nL50_bNL-1ZyHP-mngxkYcdwQx4LsrxncaUjliTHDNpVL1K87KBfKB_097Cx0Rhrrt9rNuR7nfU-ybUUyaDJ0LR6-tVhc3yg3bnY2dTCUlYCIDVqlLB9QVIBNIWA2PTq2If-MIhnGQwQelUCSwIrceZ5RZyprq7uIm3Aw0-dp4IJ");'>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto gap-6 animate-fade-in-up">
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.033em] uppercase drop-shadow-2xl">
+                    The Art of <span class="text-primary">Seduction</span>.<br/>The Center Stage.
+                </h1>
+<h2 class="text-[#e6e0d0] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                    Experience a nightly spectacle of elegance and allure on our signature runway. Where high fashion meets high energy.
+                </h2>
+<div class="mt-4 flex gap-4">
+<a href="entertainment.html" class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-[#181611] text-base font-bold tracking-wide hover:bg-[#dca60b] transition-all hover:scale-105">
+                        View Showtimes
+                    </a>
+<a href="vip.html" class="flex items-center justify-center rounded-lg h-12 px-8 border border-white/30 bg-black/20 backdrop-blur-sm text-white text-base font-bold tracking-wide hover:bg-white/10 transition-all">
+                        Private Booking
+                    </a>
+</div>
+</div>
+</div>
+<!-- The Runway Experience Section -->
+<section class="relative py-20 px-4 md:px-20 lg:px-40 bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="flex-1 flex flex-col gap-8">
+<div>
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-2 block">The Venue</span>
+<h2 class="text-white text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4">
+                                Where the Spotlight Meets the Elite
+                            </h2>
+<p class="text-[#bab29c] text-lg font-light leading-relaxed">
+                                Our architectural masterpiece sits at the heart of the venue, a 40-foot catwalk designed for high-fashion energy and captivating performances. Every angle is designed for intimacy and spectacle.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Feature 1 -->
+<div class="flex gap-4 p-4 rounded-xl border border-[#393528] bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="text-primary p-2 bg-primary/10 rounded-lg h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">highlight</span>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-1">Immersive Staging</h3>
+<p class="text-[#bab29c] text-sm">Centrally located runway ensuring every seat is a VIP experience.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex gap-4 p-4 rounded-xl border border-[#393528] bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="text-primary p-2 bg-primary/10 rounded-lg h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-1">360 Views</h3>
+<p class="text-[#bab29c] text-sm">Unobstructed sightlines from our velvet booths and mezzanine.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex gap-4 p-4 rounded-xl border border-[#393528] bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="text-primary p-2 bg-primary/10 rounded-lg h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">graphic_eq</span>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-1">State-of-the-Art Sound</h3>
+<p class="text-[#bab29c] text-sm">Acoustics tuned to perfection, enhancing the sultry atmosphere.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="flex gap-4 p-4 rounded-xl border border-[#393528] bg-surface-dark hover:border-primary/50 transition-colors group">
+<div class="text-primary p-2 bg-primary/10 rounded-lg h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">local_bar</span>
+</div>
+<div>
+<h3 class="text-white text-lg font-bold mb-1">Table Service</h3>
+<p class="text-[#bab29c] text-sm">Premium bottle service delivered right to your runway-side table.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Image Grid Side -->
+<div class="flex-1 w-full relative">
+<div class="relative z-10 grid grid-cols-2 gap-4">
+<div class="h-64 md:h-80 rounded-lg overflow-hidden translate-y-8">
+<div class="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-700" data-alt="Close up of velvet curtains and stage lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXpGlLiS9U8qzDDXf9OlVIG-NKozjUYRe2zS8tICx2QZOCD8FyOJ9E4-TWHRScatGMiCd0k3ETFZbHCyjL9IhySt7mCthf_r_cE8V1L365qiUaa4j-rjq3C9TYEQmS7fG1e-fiz180OqOcH50ph83YyA_-SoZaVyL5V8i_Ztfi6oQo7pj4sRqwPtqW4gl4_0I0xsnrpHO7-UNNxC_4Ah-ddhHJQxuszramKT2Bd-vJLhM6s7098zVpWHYz3_YqKrd99le6B2Kc0VgX");'>
+</div>
+</div>
+<div class="h-64 md:h-80 rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center hover:scale-110 transition-transform duration-700" data-alt="Low angle view of modern stage lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAh6hNLRMCAMNFhEkyqbuUtohYUKZ0G2wXfqozu0BPiGqo8DuJAsz6qFFCS0BFSVHGjRKVkIb7ocoOHHQv7UUpjyKQTKOr4msE1K6Z0xrZB4Ol_pUdmAf7_ciF5nNE0GFr93WfDZQcFis5bOD_tT2-bQO7EgzCRS-7pmYmHA7jDVsittveSjML0Btuyvdlryev90kAj9_Ae9bZhIulvCEd10CXSgKSA18deikN7gL0VTHmLUXi2kCLR0CI25DuZGsGzo1jgxZTFpD6S");'>
+</div>
+</div>
+</div>
+<!-- Decorative element behind -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+<div class="absolute bottom-0 left-0 w-60 h-60 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Performers Spotlight -->
+<section class="py-20 bg-[#1a1710]">
+<div class="max-w-[1400px] mx-auto px-4 md:px-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 px-4">
+<div>
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-2 block">Our Talent</span>
+<h2 class="text-white text-3xl md:text-4xl font-bold">Queensland's Finest</h2>
+</div>
+<a class="text-[#bab29c] hover:text-white flex items-center gap-2 mt-4 md:mt-0 transition-colors group" href="#">
+                        View Full Gallery <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal Scroll Container -->
+<div class="flex overflow-x-auto gap-6 pb-8 px-4 snap-x">
+<!-- Performer Card 1 -->
+<div class="min-w-[280px] md:min-w-[320px] h-[500px] relative rounded-xl overflow-hidden group snap-center cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Artistic silhouette of a performer in blue light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANj4TinFTGttduQP2xDq7gXiPAI6LuubA7GZn45zdtmcbFj3VUoF62f5JFCyCPiMXEY2cllASETdrtjOmvbz1q77gioEN3Fwbrb07KmcEKkUYOIekhtZBg429vqoYifBdDCKl2Ac9jDlPx3mlm_B0zpmCPnh3-riAUcx_KVW6DsnNvWkP1nE9EffVhJmSR8hGkbPoC_xFsoQPtpqjeVVv-NrBNwpjhQHxZbF5R3_50pRUgcVw4e_-u0YZuyp5YHNFRMQFtOMbmqy4Y");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Aerial Artist</span>
+<h3 class="text-white text-2xl font-bold">Elena V.</h3>
+<p class="text-[#bab29c] text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Combining grace and gravity-defying stunts, Elena brings a theatrical edge to the stage.
+                            </p>
+</div>
+</div>
+<!-- Performer Card 2 -->
+<div class="min-w-[280px] md:min-w-[320px] h-[500px] relative rounded-xl overflow-hidden group snap-center cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant dancer posing in shadows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMPGv6a_4XybotiD_grvnJxn6W8ZyLU-UsLnq5XTTF0mAoqBFDKsISuHcmhJ03jraBFUBdoQIT8t--JAVkq-DTPTuQAdqme585Lr4GZQHJNngHdI6ic3VtYkYQ4ztZ9vjTi_MpKwyYYpj1om5iaLxmmVlzwW6GDfZWwnGztOSu_Xt4SzGDS8LNvACURp16-PeyRyH2DSX51mRzbZ6c62MlIQntPKM_YBUgjxJuv3iG4Z-7TraO2aCdBR8_P1Ynke4V19M8qCewcc6L");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Contemporary</span>
+<h3 class="text-white text-2xl font-bold">Sofia R.</h3>
+<p class="text-[#bab29c] text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Fluid movements and emotional depth define her captivating nightly performances.
+                            </p>
+</div>
+</div>
+<!-- Performer Card 3 -->
+<div class="min-w-[280px] md:min-w-[320px] h-[500px] relative rounded-xl overflow-hidden group snap-center cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Performer in sparkling costume under spotlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmZz0iAquD9Hoz2zlNB0JGbNxklbXr70DeCx5OYzf-3O-Dlf3hYRGQSToUNGLbEHG9tD_KyYG_nK1Ctq-jTXai4q2yLnFx64diqfmEYLtp9DcTep4K-1ZAcNqLEtdu7ZD6ZFR5xdf43AoHn5QARyNzqqLsdaNv7_yGoexwQZ5mq3_kmgAJy-EOoIHwjl5YXHmtlaHy-Z6c03K4Hy0wJe3-g8dDRshteicOIVmvwu86nwElpFLCwnD_DxVSnirFl9QlPZ8TkiJ9kl0e");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Burlesque</span>
+<h3 class="text-white text-2xl font-bold">Madame Rose</h3>
+<p class="text-[#bab29c] text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Classic glamour with a modern twist. The queen of the feather fan dance.
+                            </p>
+</div>
+</div>
+<!-- Performer Card 4 -->
+<div class="min-w-[280px] md:min-w-[320px] h-[500px] relative rounded-xl overflow-hidden group snap-center cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Silhouette of a pole dancer against blue light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmJzfvoxb_Ge66ynT6UUW4rIfWUu_-PmMxpqjjphFVRquFV5SpgR_eP_Usz0i44Il1NcOQRQaOoWiNnkPx-4aj-Mk5TQ_LjJYiscUk2O4l_in9cvcoLebenV6hIUfAczIva2bqioVXurMpU1CH6o1CDTjatiOAVYFLgRG7neBma8LYGN5UdkCwggfQBdcotjIGJzfMljWrAQVBXh-GX6RbKcp0YWOkakaV713URr3cs1RtMqRrS2zJtaGNRQ0oP3IrR5SSW-Xr2s-m");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Acrobatics</span>
+<h3 class="text-white text-2xl font-bold">The Geminis</h3>
+<p class="text-[#bab29c] text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                A duo act that brings raw power and synchronization to the center stage.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="py-24 bg-background-dark relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#f4c025 1px, transparent 1px); background-size: 32px 32px;">
+</div>
+<div class="max-w-5xl mx-auto px-4 relative z-10">
+<div class="text-center mb-16">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-2 block">Weekly Rotation</span>
+<h2 class="text-white text-3xl md:text-5xl font-bold">Rotating Performances</h2>
+</div>
+<div class="grid gap-4">
+<!-- Schedule Item -->
+<div class="group flex flex-col md:flex-row items-center justify-between p-6 bg-[#2c281b]/50 border border-[#393528] rounded-xl hover:border-primary transition-all hover:bg-[#2c281b]">
+<div class="flex items-center gap-6 w-full md:w-auto">
+<div class="bg-[#393528] text-white p-3 rounded-lg min-w-[60px] text-center">
+<span class="block text-xs uppercase text-[#bab29c]">Thu</span>
+<span class="block text-xl font-bold">24</span>
+</div>
+<div>
+<h3 class="text-white text-xl font-bold group-hover:text-primary transition-colors">Jazz &amp; Tease</h3>
+<p class="text-[#bab29c] text-sm">Live Saxophone &amp; Classic Burlesque</p>
+</div>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+<span class="text-white font-medium text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">schedule</span> 8:00 PM - 2:00 AM
+                            </span>
+<a href="pricing.html" class="text-primary text-sm font-bold hover:text-white transition-colors uppercase tracking-wider">
+                                Reserve
+                            </a>
+</div>
+</div>
+<!-- Schedule Item -->
+<div class="group flex flex-col md:flex-row items-center justify-between p-6 bg-[#2c281b]/50 border border-[#393528] rounded-xl hover:border-primary transition-all hover:bg-[#2c281b]">
+<div class="flex items-center gap-6 w-full md:w-auto">
+<div class="bg-[#393528] text-white p-3 rounded-lg min-w-[60px] text-center">
+<span class="block text-xs uppercase text-[#bab29c]">Fri</span>
+<span class="block text-xl font-bold">25</span>
+</div>
+<div>
+<h3 class="text-white text-xl font-bold group-hover:text-primary transition-colors">The Gold Runway</h3>
+<p class="text-[#bab29c] text-sm">Our Signature Weekend Showcase</p>
+</div>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+<span class="text-white font-medium text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">schedule</span> 9:00 PM - 4:00 AM
+                            </span>
+<a href="pricing.html" class="text-primary text-sm font-bold hover:text-white transition-colors uppercase tracking-wider">
+                                Reserve
+                            </a>
+</div>
+</div>
+<!-- Schedule Item -->
+<div class="group flex flex-col md:flex-row items-center justify-between p-6 bg-[#2c281b]/50 border border-[#393528] rounded-xl hover:border-primary transition-all hover:bg-[#2c281b]">
+<div class="flex items-center gap-6 w-full md:w-auto">
+<div class="bg-[#393528] text-white p-3 rounded-lg min-w-[60px] text-center">
+<span class="block text-xs uppercase text-[#bab29c]">Sat</span>
+<span class="block text-xl font-bold">26</span>
+</div>
+<div>
+<h3 class="text-white text-xl font-bold group-hover:text-primary transition-colors">Midnight Royale</h3>
+<p class="text-[#bab29c] text-sm">feat. Guest DJ &amp; Aerial Acts</p>
+</div>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+<span class="text-white font-medium text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">schedule</span> 9:00 PM - 4:00 AM
+                            </span>
+<a href="pricing.html" class="text-primary text-sm font-bold hover:text-white transition-colors uppercase tracking-wider">
+                                Reserve
+                            </a>
+</div>
+</div>
+</div>
+<div class="mt-10 text-center">
+<button class="inline-flex items-center justify-center rounded-lg h-12 px-8 border border-primary text-primary text-sm font-bold tracking-wide hover:bg-primary hover:text-[#181611] transition-all">
+                        View Full Calendar
+                    </button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 relative">
+<div class="absolute inset-0 bg-cover bg-center bg-fixed" data-alt="Blurred abstract background of gold lights" style='background-image: linear-gradient(rgba(34, 30, 16, 0.9) 0%, rgba(34, 30, 16, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGgWlupfcw2h57uZFeSgNq_FUKfsMqx2L69pMQuhV5DhhEE6YjqasRS_sU4u4hkFJ4gb7QFp4-roDlfsR8cdGezrPbW_iU9SLa6tnRy9sbjrc8UHeJh6cW6dfnplME1JX-iiAr6ReSo1nAA7nJlWoLzuB-XSMhD6NwTv5bEL5kEtot-9vXxkKovxeRux_Rm3midQZuJstAuBj-Mob4eUu3IDTe8L2l2WdVrNwkiqSsG5mELFuu-FIwTCUZpk5U4PTTwMqQD30CjjHO");'>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto text-center px-4">
+<h2 class="text-white text-3xl md:text-5xl font-bold mb-6">Elevate Your Night</h2>
+<p class="text-[#bab29c] text-lg mb-8">
+                    Secure the best view in the house. VIP booths available for groups seeking privacy and premium service.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="vip.html" class="flex items-center justify-center rounded-lg h-14 px-10 bg-primary text-[#181611] text-lg font-bold tracking-wide hover:bg-[#dca60b] transition-all">
+                        Book VIP Table
+                    </a>
+<a href="contact.html" class="flex items-center justify-center rounded-lg h-14 px-10 bg-transparent border border-[#544e3b] text-white text-lg font-bold tracking-wide hover:bg-white/5 transition-all">
+                        Contact Concierge
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
+</div>
+<p class="text-[#bab29c] text-sm leading-relaxed">
+                            The pinnacle of nightlife luxury. Experience the extraordinary.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span> <!-- Placeholder for social icons not in material symbols -->
+</a>
+<a class="text-white/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+</div>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
+<div class="flex flex-col gap-2">
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
+<div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
+</div>
+</div>
+<p class="text-[#bab29c] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+                         </p>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#555] text-xs">© 2024 Mayfair Cabaret. All rights reserved.</p>
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
+<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+</script>
+</body></html>
