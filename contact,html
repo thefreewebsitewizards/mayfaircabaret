@@ -3,7 +3,9 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="refresh" content="0; url=contact.html"/>
 <title>Contact | The Club</title>
+<script>window.location.replace("contact.html");</script>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -48,6 +50,7 @@
 <a class="text-[#181611] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide uppercase" href="#">Venue</a>
 <a class="text-[#181611] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide uppercase" href="#">Events</a>
 <a class="text-[#181611] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide uppercase" href="#">Gallery</a>
+<a class="text-[#181611] dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal tracking-wide uppercase" href="pricing.html">Pricing</a>
 <a class="text-primary text-sm font-medium leading-normal tracking-wide uppercase border-b-2 border-primary pb-1" href="#">Contact</a>
 </nav>
 </div>
@@ -154,9 +157,7 @@
 </div>
 <div>
 <h3 class="text-white text-lg font-bold mb-1">Email</h3>
-<a class="text-primary hover:text-white transition-colors underline underline-offset-4 decoration-primary/50 hover:decoration-white" href="mailto:mikeyg4u@gmail.com">
-                                    mikeyg4u@gmail.com
-                                </a>
+<p class="text-primary hover:text-white transition-colors underline underline-offset-4 decoration-primary/50 hover:decoration-white">Contact Us</p>
 </div>
 </div>
 </div>
@@ -195,7 +196,7 @@
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Contact</h4>
 <div class="text-[#bab29c] text-sm flex flex-col gap-2">
 <p>Former Melba’s Hotel, Surfers Paradise</p>
-<a class="hover:text-primary transition-colors" href="mailto:mikeyg4u@gmail.com">mikeyg4u@gmail.com</a>
+<p class="hover:text-primary transition-colors">Contact Us</p>
 </div>
 </div>
 <!-- Hours Footer -->
@@ -222,7 +223,17 @@
 </div>
 </div>
 <div class="border-t border-[#393528] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#bab29c]">
-<p>© 2024 The Club. All rights reserved.</p>
+<p class="flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1">
+<span>© 2024 The Club. All rights reserved.</span>
+<span class="text-white/10">|</span>
+<span class="relative inline-flex items-center gap-1">
+<a class="hover:text-primary transition-colors cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
+<button class="hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+<span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity" data-copy-tooltip>Link copied</span>
+</span>
+</p>
 <div class="flex gap-6">
 <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
 <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
@@ -231,4 +242,7 @@
 </div>
 </div>
 </footer>
+<script>
+(function(){var e="https://thefreewebsitewizards.com/";var t=function(o){var n=document.createElement("textarea");n.value=o;n.setAttribute("readonly","");n.style.position="absolute";n.style.left="-9999px";document.body.appendChild(n);n.select();document.execCommand("copy");document.body.removeChild(n)};document.querySelectorAll("[data-copy-url]").forEach(function(o){o.addEventListener("click",function(){var n=o.getAttribute("data-copy-url")||e;var i=o.closest("[data-copy-tooltip]")||o.parentElement&&o.parentElement.querySelector("[data-copy-tooltip]");var r=function(){if(i){i.style.opacity="1";clearTimeout(i.__hideTimer);i.__hideTimer=setTimeout(function(){i.style.opacity="0"},1200)}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(r).catch(function(){t(n);r()})}else{t(n);r()}})})})();
+</script>
 </body></html>
