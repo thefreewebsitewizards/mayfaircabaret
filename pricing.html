@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Entertainment &amp; Pricing - Noir &amp; Gold</title>
+<title>Entertainment &amp; Pricing - Noir &amp; Neon</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
@@ -16,11 +16,11 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#f4c025",
+            "primary": "#ff2ea6",
             "background-light": "#f8f8f5",
-            "background-dark": "#181611",
-            "card-dark": "#27241b",
-            "border-gold": "#544e3b",
+            "background-dark": "#09030d",
+            "card-dark": "#140816",
+            "border-neon": "#2b0f24",
           },
           fontFamily: {
             "display": ["Be Vietnam Pro", "sans-serif"]
@@ -36,14 +36,38 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #181611;
+      background: #09030d;
     }
     ::-webkit-scrollbar-thumb {
-      background: #393528;
+      background: #2b0f24;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #f4c025;
+      background: #ff2ea6;
+    }
+    [style*="background-image"] {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    [style*="background-image"]::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(60% 70% at 18% 22%, rgba(255, 46, 166, 0.40) 0%, rgba(255, 46, 166, 0) 62%),
+        radial-gradient(55% 65% at 82% 28%, rgba(184, 75, 255, 0.32) 0%, rgba(184, 75, 255, 0) 60%),
+        linear-gradient(180deg, rgba(9, 3, 13, 0.18) 0%, rgba(9, 3, 13, 0.72) 100%);
+      opacity: 0.62;
+      pointer-events: none;
+    }
+    [style*="background-image"] > * {
+      position: relative;
+      z-index: 1;
+    }
+    img {
+      filter: saturate(1.12) contrast(1.06);
     }
   </style>
 </head>
@@ -51,7 +75,7 @@
 <!-- Main Container -->
 <div class="relative flex h-auto min-h-screen w-full flex-col">
 <!-- TopNavBar -->
-<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="fixed top-0 left-0 w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-primary/20">
 <div class="flex justify-center w-full">
 <div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
 <header class="flex items-center justify-between">
@@ -70,7 +94,7 @@
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="pricing.html">Pricing</a>
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
 </nav>
-<a href="contact.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)] flex items-center justify-center">
+<a href="contact.html" class="bg-primary hover:bg-[#ff4db9] text-background-dark transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(255,46,166,0.35)] hover:shadow-[0_0_24px_rgba(255,46,166,0.5)] flex items-center justify-center">
                             Book a Table
                         </a>
 </div>
@@ -82,7 +106,7 @@
 </div>
 </div>
 <!-- Hero Section -->
-<section class="relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden bg-cover bg-center px-4 py-20" data-alt="Dark moody nightclub atmosphere with blurred lights" style='background-image: linear-gradient(to bottom, rgba(24, 22, 17, 0.3) 0%, rgba(24, 22, 17, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSEpnbp00rCud4tEQ8RbIVZwBQ1AgmMU08Tt9BTp4Bm9-kTlZ3i47_c0d2qC-rmBwgQqXHUF6DTMJmGSjCPmj4uRlavUS3B3_aKrN_mXpSMnO9chRE1uq0zyim0FnVnGR9sQCdHq3zIgtIpIJY4D7cvEdpONoaqmWLMlz7NU4TJhajuZ0hMupjpP0ZcbIceTaF8QaF9As3fhFujXXFF5sIuvtGWn8t2cS7zk9l_xL1_GKVDx_ayjJMiQnuptAmzZBSCpej67Skzci7");'>
+<section class="relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden bg-cover bg-center px-4 py-20" data-alt="Dark moody nightclub atmosphere with blurred lights" style='background-image: linear-gradient(to bottom, rgba(9, 3, 13, 0.3) 0%, rgba(9, 3, 13, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSEpnbp00rCud4tEQ8RbIVZwBQ1AgmMU08Tt9BTp4Bm9-kTlZ3i47_c0d2qC-rmBwgQqXHUF6DTMJmGSjCPmj4uRlavUS3B3_aKrN_mXpSMnO9chRE1uq0zyim0FnVnGR9sQCdHq3zIgtIpIJY4D7cvEdpONoaqmWLMlz7NU4TJhajuZ0hMupjpP0ZcbIceTaF8QaF9As3fhFujXXFF5sIuvtGWn8t2cS7zk9l_xL1_GKVDx_ayjJMiQnuptAmzZBSCpej67Skzci7");'>
 <div class="z-10 flex max-w-[800px] flex-col items-center gap-6 text-center">
 <h1 class="text-primary text-sm font-bold tracking-[0.2em] uppercase">Unrivaled Elegance</h1>
 <h2 class="text-white text-5xl md:text-6xl font-black leading-tight tracking-tight">
@@ -99,16 +123,16 @@
 <!-- Pricing Cards Grid -->
 <div id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20">
 <!-- Card 1: General Entry -->
-<div class="group relative flex flex-col overflow-hidden rounded-xl border border-border-gold bg-card-dark transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(244,192,37,0.1)]">
+<div class="group relative flex flex-col overflow-hidden rounded-xl border border-border-neon bg-card-dark transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(255,46,166,0.16)]">
 <div class="h-2 bg-gray-600 w-full absolute top-0 left-0"></div>
 <div class="p-8 flex flex-col h-full">
-<div class="mb-6 flex items-center justify-center size-12 rounded-full bg-[#393528] text-white">
+<div class="mb-6 flex items-center justify-center size-12 rounded-full bg-primary/15 border border-primary/20 text-white">
 <span class="material-symbols-outlined text-2xl">local_activity</span>
 </div>
 <h3 class="text-2xl font-bold text-white mb-2">General Entry</h3>
 <p class="text-gray-400 text-sm mb-6 h-10">Access to the main floor, bar, and public performances.</p>
 <div class="mb-8"></div>
-<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-gold/30 pt-6">
+<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-neon/30 pt-6">
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl shrink-0">schedule</span>
 <div>
@@ -130,7 +154,7 @@
 </div>
 </div>
 </div>
-<a href="pricing.html" class="w-full rounded-lg bg-[#393528] hover:bg-[#4a4536] text-white font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto">
+<a href="pricing.html" class="w-full rounded-lg bg-primary/15 hover:bg-primary/25 border border-primary/20 text-white font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto">
                 Get Tickets
               </a>
 </div>
@@ -138,7 +162,7 @@
 <!-- Card 2: Entertainment (Highlighted) -->
 <div class="group relative flex flex-col overflow-hidden rounded-xl border border-primary bg-card-dark transform md:-translate-y-4 shadow-[0_0_40px_rgba(0,0,0,0.5)] z-10">
 <div class="h-2 bg-primary w-full absolute top-0 left-0"></div>
-<div class="absolute top-4 right-4 bg-primary text-[#181611] text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Popular</div>
+<div class="absolute top-4 right-4 bg-primary text-background-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Popular</div>
 <div class="p-8 flex flex-col h-full">
 <div class="mb-6 flex items-center justify-center size-12 rounded-full bg-primary/20 text-primary">
 <span class="material-symbols-outlined text-2xl">nightlife</span>
@@ -150,7 +174,7 @@
 <span class="text-gray-400 text-sm font-medium">/ dance</span>
 </div>
 <p class="text-xs text-gray-500 mb-6 uppercase tracking-wider">Standard Lap Dance</p>
-<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-gold/30 pt-6">
+<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-neon/30 pt-6">
 <div class="flex justify-between items-center pb-2 border-b border-white/5">
 <span class="text-white text-sm font-medium">30 Minute Suite</span>
 <span class="text-primary font-bold">$250</span>
@@ -167,16 +191,16 @@
 <p class="text-xs text-gray-300 italic text-center">"An unforgettable, private encounter in our luxury suites."</p>
 </div>
 </div>
-<a href="contact.html" class="w-full rounded-lg bg-primary hover:bg-[#d4a015] text-[#181611] font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto shadow-lg">
+<a href="contact.html" class="w-full rounded-lg bg-primary hover:bg-[#ff4db9] text-background-dark font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto shadow-[0_0_18px_rgba(255,46,166,0.25)] hover:shadow-[0_0_26px_rgba(255,46,166,0.45)]">
                 Book Suite Time
               </a>
 </div>
 </div>
 <!-- Card 3: VIP Experience -->
-<div class="group relative flex flex-col overflow-hidden rounded-xl border border-border-gold bg-card-dark transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(244,192,37,0.1)]">
+<div class="group relative flex flex-col overflow-hidden rounded-xl border border-border-neon bg-card-dark transition-all hover:border-primary/50 hover:shadow-[0_0_30px_rgba(255,46,166,0.16)]">
 <div class="h-2 bg-gray-600 w-full absolute top-0 left-0"></div>
 <div class="p-8 flex flex-col h-full">
-<div class="mb-6 flex items-center justify-center size-12 rounded-full bg-[#393528] text-white">
+<div class="mb-6 flex items-center justify-center size-12 rounded-full bg-primary/15 border border-primary/20 text-white">
 <span class="material-symbols-outlined text-2xl">diamond</span>
 </div>
 <h3 class="text-2xl font-bold text-white mb-2">VIP Booking</h3>
@@ -185,7 +209,7 @@
 <span class="text-2xl font-black text-white">Inquire</span>
 <span class="text-gray-400 text-sm font-medium">for pricing</span>
 </div>
-<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-gold/30 pt-6">
+<div class="flex flex-col gap-4 mb-8 flex-grow border-t border-border-neon/30 pt-6">
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl shrink-0">meeting_room</span>
 <div>
@@ -215,7 +239,7 @@
 </div>
 </div>
 </div>
-<a href="contact.html" class="w-full rounded-lg bg-[#393528] hover:bg-[#4a4536] text-white font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto">
+<a href="contact.html" class="w-full rounded-lg bg-primary/15 hover:bg-primary/25 border border-primary/20 text-white font-bold py-3 px-4 transition-colors uppercase tracking-wider text-sm mt-auto">
                 Contact VIP Host
               </a>
 </div>
@@ -233,22 +257,22 @@
             </p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-gold hover:border-primary transition-colors">
+<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-neon hover:border-primary transition-colors">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">chair</span>
 <h4 class="text-white font-bold mb-2">Luxury Seating</h4>
 <p class="text-gray-400 text-sm">Plush leather booths with optimal stage views.</p>
 </div>
-<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-gold hover:border-primary transition-colors">
+<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-neon hover:border-primary transition-colors">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">liquor</span>
 <h4 class="text-white font-bold mb-2">Bottle Service</h4>
 <p class="text-gray-400 text-sm">Extensive menu of premium spirits and champagne.</p>
 </div>
-<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-gold hover:border-primary transition-colors">
+<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-neon hover:border-primary transition-colors">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">groups</span>
 <h4 class="text-white font-bold mb-2">Group Packages</h4>
 <p class="text-gray-400 text-sm">Tailored experiences for stag parties and events.</p>
 </div>
-<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-gold hover:border-primary transition-colors">
+<div class="flex flex-col items-center text-center p-6 rounded-lg bg-card-dark border border-border-neon hover:border-primary transition-colors">
 <span class="material-symbols-outlined text-4xl text-primary mb-4">security</span>
 <h4 class="text-white font-bold mb-2">Discreet Security</h4>
 <p class="text-gray-400 text-sm">Professional staff ensuring your privacy and safety.</p>
@@ -256,7 +280,7 @@
 </div>
 </div>
 <!-- CTA Section -->
-<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#27241b] to-[#181611] border border-border-gold p-8 md:p-12 text-center md:text-left">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-card-dark to-background-dark border border-border-neon p-8 md:p-12 text-center md:text-left">
 <div class="absolute top-0 right-0 -mt-10 -mr-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
 <div class="max-w-xl">
@@ -266,7 +290,7 @@
                </p>
 </div>
 <div class="shrink-0">
-<a href="contact.html" class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-[#d4a015] text-[#181611] text-base font-bold tracking-wide uppercase shadow-lg transition-transform hover:scale-105">
+<a href="contact.html" class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-[#ff4db9] text-background-dark text-base font-bold tracking-wide uppercase shadow-[0_0_20px_rgba(255,46,166,0.25)] hover:shadow-[0_0_32px_rgba(255,46,166,0.5)] transition-transform hover:scale-105">
                 <span class="truncate">Inquire Now</span>
               </a>
 </div>
@@ -275,7 +299,7 @@
 </div>
 </div>
 <!-- Footer -->
-<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<footer class="bg-background-dark border-t border-primary/20 pt-16 pb-8 px-4">
 <div class="max-w-[1280px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
 <!-- Brand -->
@@ -284,7 +308,7 @@
 <span class="material-symbols-outlined text-3xl">diamond</span>
 <span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
 </div>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                             The pinnacle of nightlife luxury. Experience the extraordinary.
                         </p>
 <div class="flex gap-4 mt-2">
@@ -300,34 +324,34 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
 </div>
 </div>
 <!-- Links 2 -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
 </div>
 </div>
 <!-- Location -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
 <div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
-<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Surfers Paradise streets at night" data-location="Surfers Paradise, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
 </div>
 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
 <span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
 </div>
 </div>
-<p class="text-[#bab29c] text-xs">
-                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+<p class="text-[#d8b6cb] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Queensland
                          </p>
 </div>
 </div>
@@ -336,8 +360,8 @@
 <span>© 2024 Mayfair Cabaret. All rights reserved.</span>
 <span class="text-white/10">|</span>
 <span class="relative inline-flex items-center gap-1">
-<a class="text-[#bab29c] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
-<button class="text-[#bab29c] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
+<a class="text-[#d8b6cb] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
+<button class="text-[#d8b6cb] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
 <span class="material-symbols-outlined text-sm">content_copy</span>
 </button>
 <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity" data-copy-tooltip>Link copied</span>
@@ -345,14 +369,14 @@
 </p>
 <div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
 <span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
-<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+<span class="text-[#d8b6cb] text-xs font-medium">18+ Only. ID Required.</span>
 </div>
 </div>
 </div>
 </footer>
 </div>
 <script>
-(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#09030d] border-l border-[#2b0f24] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
 </script>
 <script>
 (function(){var e="https://thefreewebsitewizards.com/";var t=function(o){var n=document.createElement("textarea");n.value=o;n.setAttribute("readonly","");n.style.position="absolute";n.style.left="-9999px";document.body.appendChild(n);n.select();document.execCommand("copy");document.body.removeChild(n)};document.querySelectorAll("[data-copy-url]").forEach(function(o){o.addEventListener("click",function(){var n=o.getAttribute("data-copy-url")||e;var i=o.closest("[data-copy-tooltip]")||o.parentElement&&o.parentElement.querySelector("[data-copy-tooltip]");var r=function(){if(i){i.style.opacity="1";clearTimeout(i.__hideTimer);i.__hideTimer=setTimeout(function(){i.style.opacity="0"},1200)}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(r).catch(function(){t(n);r()})}else{t(n);r()}})})})();

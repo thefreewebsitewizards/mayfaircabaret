@@ -18,11 +18,11 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#f4c025",
+                        "primary": "#ff2ea6",
                         "background-light": "#f8f8f5",
-                        "background-dark": "#221e10",
-                        "surface-dark": "#2c281b", // Slightly lighter for cards
-                        "border-gold": "#544e3b",
+                        "background-dark": "#09030d",
+                        "surface-dark": "#140816", // Slightly lighter for cards
+                        "border-neon": "#2b0f24",
                     },
                     fontFamily: {
                         "display": ["Be Vietnam Pro", "sans-serif"]
@@ -34,11 +34,37 @@
             },
         }
     </script>
+<style>
+        [style*="background-image"] {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        [style*="background-image"]::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(60% 70% at 18% 22%, rgba(255, 46, 166, 0.40) 0%, rgba(255, 46, 166, 0) 62%),
+                radial-gradient(55% 65% at 82% 28%, rgba(184, 75, 255, 0.32) 0%, rgba(184, 75, 255, 0) 60%),
+                linear-gradient(180deg, rgba(9, 3, 13, 0.18) 0%, rgba(9, 3, 13, 0.72) 100%);
+            opacity: 0.62;
+            pointer-events: none;
+        }
+        [style*="background-image"] > * {
+            position: relative;
+            z-index: 1;
+        }
+        img {
+            filter: saturate(1.12) contrast(1.06);
+        }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-stone-900 dark:text-white font-display overflow-x-hidden antialiased">
 <div class="relative flex min-h-screen w-full flex-col group/design-root">
 <!-- Top Navigation -->
-<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="fixed top-0 left-0 w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-primary/20">
 <div class="flex justify-center w-full">
 <div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
 <header class="flex items-center justify-between">
@@ -57,7 +83,7 @@
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="pricing.html">Pricing</a>
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
 </nav>
-<a href="contact.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)] flex items-center justify-center">
+<a href="contact.html" class="bg-primary hover:bg-[#ff4db9] text-background-dark transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(255,46,166,0.35)] hover:shadow-[0_0_24px_rgba(255,46,166,0.5)] flex items-center justify-center">
                             Book a Table
                         </a>
 </div>
@@ -70,7 +96,7 @@
 </div>
 <!-- Hero Section -->
 <div class="relative w-full">
-<div class="flex flex-col items-center justify-center min-h-[600px] bg-cover bg-center bg-no-repeat relative" data-alt="Abstract luxurious dark liquid splash with gold highlights" style='background-image: linear-gradient(to bottom, rgba(34, 30, 16, 0.4) 0%, rgba(34, 30, 16, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMBRTGss6RQOU6XDiPMEw74lP0x7t1xdL32n0uo9wPIz1FeuhCoU3_HLPUQD-GPMYYj6PzibK9Pf7bVSY6Z_BWl1q5Dn43Kne89pJGlQnSZ5rlGB52R6kSK8aO4JGPqdTTanAi3-8sSdhAar4MgutVQmz72tYSyRuZxIl-XF5TbwLJbiv9_dZosrLgyX7JZijoSCHTy9xYOSXyfr6DebWa2s6a5UttiWC-45Ot7yNkNTUBAVI-lelFxcnmPFcYT76UKptT1uYIX4BX");'>
+<div class="flex flex-col items-center justify-center min-h-[600px] bg-cover bg-center bg-no-repeat relative" data-alt="Abstract luxurious dark liquid splash with neon highlights" style='background-image: linear-gradient(to bottom, rgba(9, 3, 13, 0.35) 0%, rgba(9, 3, 13, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMBRTGss6RQOU6XDiPMEw74lP0x7t1xdL32n0uo9wPIz1FeuhCoU3_HLPUQD-GPMYYj6PzibK9Pf7bVSY6Z_BWl1q5Dn43Kne89pJGlQnSZ5rlGB52R6kSK8aO4JGPqdTTanAi3-8sSdhAar4MgutVQmz72tYSyRuZxIl-XF5TbwLJbiv9_dZosrLgyX7JZijoSCHTy9xYOSXyfr6DebWa2s6a5UttiWC-45Ot7yNkNTUBAVI-lelFxcnmPFcYT76UKptT1uYIX4BX");'>
 <div class="max-w-[800px] text-center px-4 relative z-10">
 <h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6 drop-shadow-xl">
                         THE LIQUID <span class="text-primary">EXPERIENCE</span>
@@ -105,25 +131,25 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <!-- Special 1 -->
-<div class="flex gap-4 rounded-xl border border-border-gold bg-surface-dark p-6 hover:border-primary transition-colors group">
+<div class="flex gap-4 rounded-xl border border-border-neon bg-surface-dark p-6 hover:border-primary transition-colors group">
 <div class="text-primary p-3 bg-background-dark rounded-full h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
 <span class="material-symbols-outlined text-3xl">schedule</span>
 </div>
 <div class="flex flex-col gap-2">
 <h4 class="text-white text-xl font-bold">Half-Price House Spirits</h4>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                                     Start the night right. Enjoy 50% off all house spirits for the first two hours of opening every night.
                                 </p>
 </div>
 </div>
 <!-- Special 2 -->
-<div class="flex gap-4 rounded-xl border border-border-gold bg-surface-dark p-6 hover:border-primary transition-colors group">
+<div class="flex gap-4 rounded-xl border border-border-neon bg-surface-dark p-6 hover:border-primary transition-colors group">
 <div class="text-primary p-3 bg-background-dark rounded-full h-fit group-hover:bg-primary group-hover:text-background-dark transition-colors">
 <span class="material-symbols-outlined text-3xl">wine_bar</span>
 </div>
 <div class="flex flex-col gap-2">
 <h4 class="text-white text-xl font-bold">$15 Spritz Special</h4>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                                     All night long.
                                 </p>
 </div>
@@ -133,10 +159,10 @@
 </div>
 </div>
 <!-- Bar Concepts -->
-<div class="flex flex-1 justify-center py-16 bg-[#1a170f]">
+<div class="flex flex-1 justify-center py-16 bg-[#0b0410]">
 <div class="layout-content-container flex flex-col w-full max-w-[1200px] px-6">
 <div class="flex flex-col gap-12">
-<div class="flex justify-between items-end border-b border-border-gold pb-6">
+<div class="flex justify-between items-end border-b border-border-neon pb-6">
 <div>
 <h2 class="text-white text-3xl font-bold leading-tight tracking-tight">BAR CONCEPTS</h2>
 <p class="text-primary mt-2 text-sm font-medium tracking-wide">TWO DISTINCT EXPERIENCES UNDER ONE ROOF</p>
@@ -148,7 +174,7 @@
 <div class="flex flex-col rounded-2xl overflow-hidden bg-background-dark group">
 <div class="h-64 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Crowded energetic main bar with neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_7KeVsODDeRIIf6miYfYWQ3PODXaBSyhGVf4f5JP2rC5tXy3p7vLq1jmzjPT2HlK4KzlwPkh3uw-gXEhiH9oRDNS4c9nZ4WEedPxle-OLfy9r7ExCjAmfueUXCFs2t_GsyF7rJepvwOuaemrYTpxYUz5edzSSfFo9hjz88-aI-WXQsByiHl62cVlsG7MkGMnrGgwqHu_73ajmSR5Lp2ZHrsaRY5cXURulA5uIzz5Gn1rqqLnF_9pZ_ZDb4_ZGjW7EEQ6Q0rv4w7vO");'>
 </div>
-<div class="p-8 flex flex-col flex-1 border-x border-b border-border-gold rounded-b-2xl relative top-[-10px] bg-background-dark">
+<div class="p-8 flex flex-col flex-1 border-x border-b border-border-neon rounded-b-2xl relative top-[-10px] bg-background-dark">
 <div class="flex justify-between items-start mb-4">
 <h3 class="text-2xl font-bold text-white">CABARET BAR</h3>
 <span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider">Club Access</span>
@@ -172,7 +198,7 @@
 <div class="flex flex-col rounded-2xl overflow-hidden bg-background-dark group">
 <div class="h-64 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Sophisticated cocktail bar balcony view city lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5tegmx_kXYc19ajnjsu8ZjenuqLBmE-MaCZgQfsN1-_z58WlSu4UKHSv8BYMFM1yH1UXaHPVBLqkXy3X3WfGaxgCDH7mom9bZONpKkaWlUNqr1AGuisL4RoIWVzu6asfcn8G6Fn2RcfMCkmw2ChPGdHCojSmP-2zJFCNoUGOqut7dWViNfHNsBsDYrqenA_dhr61kLps0SLOp_q71UnttXjWGGz62BvvYjpk1zP1jrpzVMC3iZZxXPREl7pu7NZEMUz6YNgyUWlqo");'>
 </div>
-<div class="p-8 flex flex-col flex-1 border-x border-b border-border-gold rounded-b-2xl relative top-[-10px] bg-background-dark">
+<div class="p-8 flex flex-col flex-1 border-x border-b border-border-neon rounded-b-2xl relative top-[-10px] bg-background-dark">
 <div class="flex justify-between items-start mb-4">
 <h3 class="text-2xl font-bold text-white">BALCONY BAR</h3>
 <span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider">Balcony View</span>
@@ -221,7 +247,7 @@
 <span class="font-medium text-background-dark/70">2 Bottles + 4 Mixers + Sparklers</span>
 </div>
 <div class="flex items-center justify-between border-b border-black/10 pb-2">
-<span class="font-bold text-background-dark">GOLD PACKAGE</span>
+<span class="font-bold text-background-dark">PLATINUM PACKAGE</span>
 <span class="font-medium text-background-dark/70">3 Premium Bottles + Unlimited Mixers</span>
 </div>
 </div>
@@ -253,15 +279,15 @@
 <div class="space-y-16">
 <!-- Section 1 -->
 <div>
-<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-gold pb-2 mb-6">The Spritz Collection</h3>
+<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-neon pb-2 mb-6">The Spritz Collection</h3>
 <div class="grid gap-6">
 <div class="group">
 <div class="flex justify-between items-baseline mb-1">
-<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Golden Hour Spritz</h4>
+<h4 class="text-white text-lg font-medium group-hover:text-primary transition-colors">Neon Hour Spritz</h4>
 <div class="flex-1 mx-4 border-b border-dashed border-gray-700 h-1"></div>
 <span class="text-primary font-bold">$18</span>
 </div>
-<p class="text-gray-500 text-sm">Aperol, Prosecco, passionfruit infusion, soda, gold dust.</p>
+<p class="text-gray-500 text-sm">Aperol, Prosecco, passionfruit infusion, soda, pink shimmer.</p>
 </div>
 <div class="group">
 <div class="flex justify-between items-baseline mb-1">
@@ -283,7 +309,7 @@
 </div>
 <!-- Section 2 -->
 <div>
-<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-gold pb-2 mb-6">House Signatures</h3>
+<h3 class="text-primary text-lg font-bold uppercase tracking-widest border-b border-border-neon pb-2 mb-6">House Signatures</h3>
 <div class="grid gap-6">
 <div class="group">
 <div class="flex justify-between items-baseline mb-1">
@@ -312,7 +338,7 @@
 </div>
 </div>
 </div>
-<div class="mt-16 p-6 border border-border-gold rounded-lg bg-surface-dark text-center">
+<div class="mt-16 p-6 border border-border-neon rounded-lg bg-surface-dark text-center">
 <p class="text-gray-400 text-sm">
                         Please inform your server of any allergies. <br/>
                         A 15% service charge is added to tables of 6 or more.
@@ -321,7 +347,7 @@
 </div>
 </div>
 <!-- Footer -->
-<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<footer class="bg-background-dark border-t border-primary/20 pt-16 pb-8 px-4">
 <div class="max-w-[1280px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
 <!-- Brand -->
@@ -330,7 +356,7 @@
 <span class="material-symbols-outlined text-3xl">diamond</span>
 <span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
 </div>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                             The pinnacle of nightlife luxury. Experience the extraordinary.
                         </p>
 <div class="flex gap-4 mt-2">
@@ -346,34 +372,34 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
 </div>
 </div>
 <!-- Links 2 -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
 </div>
 </div>
 <!-- Location -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
 <div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
-<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Surfers Paradise streets at night" data-location="Surfers Paradise, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
 </div>
 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
 <span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
 </div>
 </div>
-<p class="text-[#bab29c] text-xs">
-                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+<p class="text-[#d8b6cb] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Queensland
                          </p>
 </div>
 </div>
@@ -382,8 +408,8 @@
 <span>© 2024 Mayfair Cabaret. All rights reserved.</span>
 <span class="text-white/10">|</span>
 <span class="relative inline-flex items-center gap-1">
-<a class="text-[#bab29c] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
-<button class="text-[#bab29c] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
+<a class="text-[#d8b6cb] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
+<button class="text-[#d8b6cb] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
 <span class="material-symbols-outlined text-sm">content_copy</span>
 </button>
 <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity" data-copy-tooltip>Link copied</span>
@@ -391,7 +417,7 @@
 </p>
 <div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
 <span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
-<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+<span class="text-[#d8b6cb] text-xs font-medium">18+ Only. ID Required.</span>
 </div>
 </div>
 </div>
@@ -402,7 +428,7 @@
 </button>
 </div>
 <script>
-(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#09030d] border-l border-[#2b0f24] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
 </script>
 <script>
 (function(){var e="https://thefreewebsitewizards.com/";var t=function(o){var n=document.createElement("textarea");n.value=o;n.setAttribute("readonly","");n.style.position="absolute";n.style.left="-9999px";document.body.appendChild(n);n.select();document.execCommand("copy");document.body.removeChild(n)};document.querySelectorAll("[data-copy-url]").forEach(function(o){o.addEventListener("click",function(){var n=o.getAttribute("data-copy-url")||e;var i=o.closest("[data-copy-tooltip]")||o.parentElement&&o.parentElement.querySelector("[data-copy-tooltip]");var r=function(){if(i){i.style.opacity="1";clearTimeout(i.__hideTimer);i.__hideTimer=setTimeout(function(){i.style.opacity="0"},1200)}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(r).catch(function(){t(n);r()})}else{t(n);r()}})})})();

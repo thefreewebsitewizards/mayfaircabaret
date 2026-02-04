@@ -20,9 +20,10 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#f4c025",
+                        "primary": "#ff2ea6",
                         "background-light": "#f8f8f5",
-                        "background-dark": "#221e10",
+                        "background-dark": "#09030d",
+                        "surface-dark": "#140816",
                     },
                     fontFamily: {
                         "display": ["Be Vietnam Pro", "sans-serif"],
@@ -39,20 +40,44 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #221e10; 
+            background: #09030d; 
         }
         ::-webkit-scrollbar-thumb {
-            background: #393528; 
+            background: #2b0f24; 
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #f4c025; 
+            background: #ff2ea6; 
+        }
+        [style*="background-image"] {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        [style*="background-image"]::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(60% 70% at 18% 22%, rgba(255, 46, 166, 0.40) 0%, rgba(255, 46, 166, 0) 62%),
+                radial-gradient(55% 65% at 82% 28%, rgba(184, 75, 255, 0.32) 0%, rgba(184, 75, 255, 0) 60%),
+                linear-gradient(180deg, rgba(9, 3, 13, 0.18) 0%, rgba(9, 3, 13, 0.72) 100%);
+            opacity: 0.62;
+            pointer-events: none;
+        }
+        [style*="background-image"] > * {
+            position: relative;
+            z-index: 1;
+        }
+        img {
+            filter: saturate(1.12) contrast(1.06);
         }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden antialiased">
 <div class="relative flex h-auto min-h-screen w-full flex-col">
-<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="fixed top-0 left-0 w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-primary/20">
 <div class="flex justify-center w-full">
 <div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
 <header class="flex items-center justify-between">
@@ -71,7 +96,7 @@
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="pricing.html">Pricing</a>
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
 </nav>
-<a href="contact.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)] flex items-center justify-center">
+<a href="contact.html" class="bg-primary hover:bg-[#ff4db9] text-background-dark transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(255,46,166,0.35)] hover:shadow-[0_0_24px_rgba(255,46,166,0.5)] flex items-center justify-center">
                             Book a Table
                         </a>
 </div>
@@ -90,7 +115,7 @@
                     The Gallery
                 </h1>
 <p class="mx-auto max-w-2xl text-lg text-white/60 font-light">
-                    Where elegance meets the night. Immerse yourself in our world of shadow and gold.
+                    Where elegance meets the night. Immerse yourself in our world of shadow and neon.
                 </p>
 </div>
 <!-- Filter Chips -->
@@ -99,16 +124,16 @@
 <button class="flex h-9 items-center justify-center rounded-full bg-primary px-6 transition-all hover:bg-primary/90">
 <p class="text-background-dark text-sm font-bold">All</p>
 </button>
-<button class="flex h-9 items-center justify-center rounded-full bg-[#393528] px-6 transition-all hover:bg-[#393528]/80 hover:text-white">
+<button class="flex h-9 items-center justify-center rounded-full bg-primary/15 border border-primary/20 px-6 transition-all hover:bg-primary/25 hover:text-white">
 <p class="text-white/80 text-sm font-medium">Main Floor</p>
 </button>
-<button class="flex h-9 items-center justify-center rounded-full bg-[#393528] px-6 transition-all hover:bg-[#393528]/80 hover:text-white">
+<button class="flex h-9 items-center justify-center rounded-full bg-primary/15 border border-primary/20 px-6 transition-all hover:bg-primary/25 hover:text-white">
 <p class="text-white/80 text-sm font-medium">VIP Balcony</p>
 </button>
-<button class="flex h-9 items-center justify-center rounded-full bg-[#393528] px-6 transition-all hover:bg-[#393528]/80 hover:text-white">
+<button class="flex h-9 items-center justify-center rounded-full bg-primary/15 border border-primary/20 px-6 transition-all hover:bg-primary/25 hover:text-white">
 <p class="text-white/80 text-sm font-medium">The Bar</p>
 </button>
-<button class="flex h-9 items-center justify-center rounded-full bg-[#393528] px-6 transition-all hover:bg-[#393528]/80 hover:text-white">
+<button class="flex h-9 items-center justify-center rounded-full bg-primary/15 border border-primary/20 px-6 transition-all hover:bg-primary/25 hover:text-white">
 <p class="text-white/80 text-sm font-medium">Cocktails</p>
 </button>
 </div>
@@ -117,7 +142,7 @@
 <div id="experience" class="w-full max-w-[960px] px-4 pb-20 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px]">
 <!-- Item 1: Wide Feature -->
-<div class="group relative col-span-1 sm:col-span-2 row-span-2 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 sm:col-span-2 row-span-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Dark nightclub interior with purple lighting and crowd" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8uBKm-f7ndt1P1JZ4_x6SNM5CMS4usD8G483dNjNnrQJOTsP4nd0BKwmyw5JdUxaaxEhCOExVetpJl8l5tCZSuHtZZ_-34pw7madDJBTTZbctsbLhFVjAGj6Oyeod8VYpQitO8kvoErYQlYLfKRHCGmZiz1oDnKELQEGiCfpK6EeTr4_mVLt-WQTsozEULaRmElrEoI9K2ztnWKT8Fk6GMrZzR7LZ0MfwpYKSjrZpAr0etIb0tRlrcDrqYLqSstgZhl2jLbLzI_Sx");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
 <div class="absolute bottom-0 left-0 p-6 translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
@@ -126,7 +151,7 @@
 </div>
 </div>
 <!-- Item 2: Portrait -->
-<div class="group relative col-span-1 row-span-2 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 row-span-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Close up of a fancy cocktail with smoke" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC585e8Rh26Y8NqsAWuIqj4R99SY2Pn7lIhOSoFPBBOOaElgL_woolqLYfnyap2Pl72gxAG38WQru6J26Fq7IqAcSBq-Af75a1PSs5LfMivGBbabDxjsYxiMBUu33tSecWfN9diGNXTvYrM6p8PvAxqX4eBCebGn6XCM5hRqtukHJguOjkeFHpGAAxx-TtEVjxRk46YnbEX_LSvXAHV4jFxSrthkgLQciADLIDCGwXAuI3bcO2Hjg-usm1m1aGB7Zkyj7lfGn15kKJ-");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
 <div class="absolute bottom-0 left-0 p-4 translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
@@ -135,7 +160,7 @@
 </div>
 </div>
 <!-- Item 3: Square -->
-<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Luxury leather booth seating in dark room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBz7gwJJPB7y_4_ZVnb-FwIVhRbpXdF6lofjt0Ri2c6L1RDvz8_VxcPTNhf4vKdGPmIQec2PxRPr42YA1c3yLpeSQxAK9NYqr63Sf--stUr8vBo6S0nfegvvCO4RUGkFunaNfZ4bw_Wi8L9jYcqg3TexC2wC_gX_R1qwKMJjrNDhrJCJx0QLYF0DcdD_S13mhw0Rbycx5Eg63dt__H15L1DpQ3VkaWKXWp0ikrOGUuNUC9Bd2kjlBJWFyu_lZCVRRUCCigarCjpeTM7");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 <div class="absolute bottom-0 left-0 p-4">
@@ -143,7 +168,7 @@
 </div>
 </div>
 <!-- Item 4: Square -->
-<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Bartender pouring a drink with blue light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkh19FE7XZG-2eLztJm3h9itYhjeBis280TWX8dBIRZQGNjXC0zD9EtR8CtRZPzPFX2bmYEolJLEEP3U91n_pmd4FB8s7tWqn7Pp5x6ZsVhucmZtGoc00F9SpaB839Wrb3xcDGK9MqxPCmUHxOkZzTFMuJio6s-ccxblBRedyzFuqeh2LLB4_bfQq4Aftco8--ncjGZsnSCTuR0RrhDCD1C2Jghai83Jho9T9FpFOeUBmVJla6NFlzIGC8XpEPSprVJoqWd1QKRhKo");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 <div class="absolute bottom-0 left-0 p-4">
@@ -151,16 +176,16 @@
 </div>
 </div>
 <!-- Item 5: Wide Landscape -->
-<div class="group relative col-span-1 sm:col-span-2 row-span-1 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Abstract golden light texture bokeh" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGMRpQc8aixBVQJ3Gs0SI8f7-MDPnOLAQx19KgB_LobUonBOI-WoMJTubfKr40S2GwnlpN9_V7BCLb1rTY8yW1W1b2JaBkx2NlxXNcJoy6jqv6PR2cZN4qzQNOKsTttm-rw9KvPh3uGcuh3C8PPXTzpWp3kvCuK2dKr8o-PDNZ74NhVM-fkn8FhWGxzw33pbelDeLjmJsuPj34gu5vhxtLzMEDdYGxI-F6u9Uj6wfPPEVuwVJfxlIMzKN7edJ-mZCciuw1R4XOEEGl");'></div>
+<div class="group relative col-span-1 sm:col-span-2 row-span-1 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Abstract neon light texture bokeh" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGMRpQc8aixBVQJ3Gs0SI8f7-MDPnOLAQx19KgB_LobUonBOI-WoMJTubfKr40S2GwnlpN9_V7BCLb1rTY8yW1W1b2JaBkx2NlxXNcJoy6jqv6PR2cZN4qzQNOKsTttm-rw9KvPh3uGcuh3C8PPXTzpWp3kvCuK2dKr8o-PDNZ74NhVM-fkn8FhWGxzw33pbelDeLjmJsuPj34gu5vhxtLzMEDdYGxI-F6u9Uj6wfPPEVuwVJfxlIMzKN7edJ-mZCciuw1R4XOEEGl");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80"></div>
 <div class="absolute bottom-0 left-0 p-6 translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
 <p class="text-primary text-xs font-bold uppercase tracking-wider mb-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">Atmosphere</p>
-<h3 class="text-white text-xl font-bold leading-tight">Golden Hour</h3>
+<h3 class="text-white text-xl font-bold leading-tight">Neon Hour</h3>
 </div>
 </div>
 <!-- Item 6: Square -->
-<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="DJ mixing deck close up in dark" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCx87BvgZwxTXNVieNNMWJfYwxm-m4536clhvkN-U8r_SW75Pn8KvFmxedNZ3VRQRR9gQhDcYx4ztQ4XR1zB5BYgrc-TYHnJYUZt9RK_-Faki4EcPUNziUhVd2VtY4Yfb3uU1B6HPz_Vw7rWWE22tJtC_wK3B5NlqnP7wekncMsogRPf9X6z1rEfmIUaJ9scOhfLopzeVJJV5QojUZlwsU4MzTZK5Btm6c0_664hsSrWSO1nsPe1qBcb7gsj9KcrCjwwH3ZJK2FLWk0");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 <div class="absolute bottom-0 left-0 p-4">
@@ -168,7 +193,7 @@
 </div>
 </div>
 <!-- Item 7: Square -->
-<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-[#393528] cursor-pointer">
+<div class="group relative col-span-1 row-span-1 overflow-hidden rounded-lg bg-primary/10 border border-primary/20 cursor-pointer">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="People partying silhouette dark background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCi0YLjIazonYWUv5_QXEO6TMsX9Gqo4ODJWbcfiZ2ZHMg5iSSzBRmWkqTfLog5bs_bY85Qa7L1VncRFTqz3nxb_vRLlGqxoWqsHZKzzlTgwMDRRcLATPn7ZthNApQcAhpSEOu-qBEbIEW9c4PPTZxQpZXX85qVWQ2H5J4uJGFk1AxYUz7ndkZAdgpFyZpzYHf88E-Dl9iuOC9ifXs6WbhNsRVTcmSbPZbXxQFcWh0XsGvfqvRNz5aEoZjakNJvn4eG6y_MBsOVjFm6");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 <div class="absolute bottom-0 left-0 p-4">
@@ -178,7 +203,7 @@
 </div>
 </div>
 <!-- CTA Section -->
-<div class="w-full bg-[#181611] border-t border-[#393528]">
+<div class="w-full bg-background-dark border-t border-primary/20">
 <div class="layout-content-container mx-auto flex max-w-[960px] flex-col items-center justify-center gap-6 px-4 py-16 sm:px-10 sm:py-20 text-center">
 <div class="flex flex-col gap-2">
 <h2 class="text-white text-3xl font-black leading-tight tracking-tight sm:text-4xl max-w-[720px]">
@@ -188,13 +213,13 @@
                             Don't just watch from a distance. Reserve your exclusive spot for an unforgettable night of luxury and entertainment.
                         </p>
 </div>
-<a href="contact.html" class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-[#181611] text-base font-bold leading-normal tracking-wide transition-all hover:bg-white hover:scale-105">
+<a href="contact.html" class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold leading-normal tracking-wide transition-all hover:bg-[#ff4db9] hover:scale-105 shadow-[0_0_18px_rgba(255,46,166,0.25)] hover:shadow-[0_0_26px_rgba(255,46,166,0.45)]">
                             <span class="truncate">Book a Table</span>
                         </a>
 </div>
 </div>
 </main>
-<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<footer class="bg-background-dark border-t border-primary/20 pt-16 pb-8 px-4">
 <div class="max-w-[1280px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
 <div class="flex flex-col gap-4">
@@ -202,7 +227,7 @@
 <span class="material-symbols-outlined text-3xl">diamond</span>
 <span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
 </div>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                             The pinnacle of nightlife luxury. Experience the extraordinary.
                         </p>
 <div class="flex gap-4 mt-2">
@@ -217,32 +242,32 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
 </div>
 </div>
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
 </div>
 </div>
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
 <div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
-<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Surfers Paradise streets at night" data-location="Surfers Paradise, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
 </div>
 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
 <span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
 </div>
 </div>
-<p class="text-[#bab29c] text-xs">
-                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+<p class="text-[#d8b6cb] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Queensland
                          </p>
 </div>
 </div>
@@ -251,8 +276,8 @@
 <span>© 2024 Mayfair Cabaret. All rights reserved.</span>
 <span class="text-white/10">|</span>
 <span class="relative inline-flex items-center gap-1">
-<a class="text-[#bab29c] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
-<button class="text-[#bab29c] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
+<a class="text-[#d8b6cb] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
+<button class="text-[#d8b6cb] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
 <span class="material-symbols-outlined text-sm">content_copy</span>
 </button>
 <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity" data-copy-tooltip>Link copied</span>
@@ -260,14 +285,14 @@
 </p>
 <div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
 <span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
-<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+<span class="text-[#d8b6cb] text-xs font-medium">18+ Only. ID Required.</span>
 </div>
 </div>
 </div>
 </footer>
 </div>
 <script>
-(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#09030d] border-l border-[#2b0f24] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
 </script>
 <script>
 (function(){var e="https://thefreewebsitewizards.com/";var t=function(o){var n=document.createElement("textarea");n.value=o;n.setAttribute("readonly","");n.style.position="absolute";n.style.left="-9999px";document.body.appendChild(n);n.select();document.execCommand("copy");document.body.removeChild(n)};document.querySelectorAll("[data-copy-url]").forEach(function(o){o.addEventListener("click",function(){var n=o.getAttribute("data-copy-url")||e;var i=o.closest("[data-copy-tooltip]")||o.parentElement&&o.parentElement.querySelector("[data-copy-tooltip]");var r=function(){if(i){i.style.opacity="1";clearTimeout(i.__hideTimer);i.__hideTimer=setTimeout(function(){i.style.opacity="0"},1200)}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(r).catch(function(){t(n);r()})}else{t(n);r()}})})})();

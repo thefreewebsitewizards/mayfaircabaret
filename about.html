@@ -16,10 +16,10 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#f4c025",
+                        "primary": "#ff2ea6",
                         "background-light": "#f8f8f5",
-                        "background-dark": "#181611", // Slightly darker than config for deep luxury feel, but matching base component
-                        "surface-dark": "#221e10",
+                        "background-dark": "#09030d",
+                        "surface-dark": "#140816",
                     },
                     fontFamily: {
                         "display": ["Be Vietnam Pro", "sans-serif"]
@@ -35,21 +35,45 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #181611;
+            background: #09030d;
         }
         ::-webkit-scrollbar-thumb {
-            background: #393528;
+            background: #2b0f24;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #f4c025;
+            background: #ff2ea6;
+        }
+        [style*="background-image"] {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        [style*="background-image"]::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(60% 70% at 18% 22%, rgba(255, 46, 166, 0.40) 0%, rgba(255, 46, 166, 0) 62%),
+                radial-gradient(55% 65% at 82% 28%, rgba(184, 75, 255, 0.32) 0%, rgba(184, 75, 255, 0) 60%),
+                linear-gradient(180deg, rgba(9, 3, 13, 0.18) 0%, rgba(9, 3, 13, 0.72) 100%);
+            opacity: 0.62;
+            pointer-events: none;
+        }
+        [style*="background-image"] > * {
+            position: relative;
+            z-index: 1;
+        }
+        img {
+            filter: saturate(1.12) contrast(1.06);
         }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-surface-dark">
 <div class="relative flex min-h-screen w-full flex-col">
 <!-- Navigation -->
-<div class="fixed top-0 left-0 w-full z-50 bg-[#12100e]/90 backdrop-blur-md border-b border-[#393528]">
+<div class="fixed top-0 left-0 w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-primary/20">
 <div class="flex justify-center w-full">
 <div class="max-w-[1280px] w-full px-4 lg:px-10 py-4">
 <header class="flex items-center justify-between">
@@ -68,7 +92,7 @@
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="pricing.html">Pricing</a>
 <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide" href="contact.html">Contact</a>
 </nav>
-<a href="contact.html" class="bg-primary hover:bg-[#dcb048] text-[#12100e] transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(244,192,37,0.3)] flex items-center justify-center">
+<a href="contact.html" class="bg-primary hover:bg-[#ff4db9] text-background-dark transition-all duration-300 h-10 px-6 rounded-lg text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(255,46,166,0.35)] hover:shadow-[0_0_24px_rgba(255,46,166,0.5)] flex items-center justify-center">
                             Book a Table
                         </a>
 </div>
@@ -84,20 +108,20 @@
 <!-- Background Image with Overlay -->
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-gradient-to-b from-background-dark/40 via-background-dark/60 to-background-dark z-10"></div>
-<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-[20s] hover:scale-105" data-alt="Abstract dark luxury pattern with gold smoke" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdtMrG10ZYtxUnarHgpIP5G8Xmt58htb1dF_eLvZgRKWKAuRkm-V2_kOI6_dlZBJoxOVE9Y1N0iCMZC46oedOmSHTRs53ttjCXdWUuXlKN5uwXYJJCAZc6-D6IsLxbLLSy7MqTfQNu67P5bzlM7YAH1iBCrfhyN-CuZBbnHK1gbAjZ8Tbv80JaRAJnMzx1hNjCcb9beSQUrFzYtIwoov1XMOJkmdPEHaJzwRqRGL4IQIdocHpWYmGzj2-rAqJsaAFlgud59SNpsO0m');"></div>
+<div class="h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-[20s] hover:scale-105" data-alt="Abstract dark luxury pattern with neon haze" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdtMrG10ZYtxUnarHgpIP5G8Xmt58htb1dF_eLvZgRKWKAuRkm-V2_kOI6_dlZBJoxOVE9Y1N0iCMZC46oedOmSHTRs53ttjCXdWUuXlKN5uwXYJJCAZc6-D6IsLxbLLSy7MqTfQNu67P5bzlM7YAH1iBCrfhyN-CuZBbnHK1gbAjZ8Tbv80JaRAJnMzx1hNjCcb9beSQUrFzYtIwoov1XMOJkmdPEHaJzwRqRGL4IQIdocHpWYmGzj2-rAqJsaAFlgud59SNpsO0m');"></div>
 </div>
 <!-- Content -->
 <div class="relative z-20 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
 <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
 <span class="material-symbols-outlined text-[18px]">star</span>
-<span>The Gold Coast's Premier Destination</span>
+<span>Surfers Paradise’s Premier Destination</span>
 </div>
 <h1 class="mb-6 text-5xl font-black leading-tight tracking-tight text-white sm:text-7xl lg:text-8xl">
                     The Jewel of <br/>
-<span class="bg-gradient-to-r from-primary to-yellow-200 bg-clip-text text-transparent">Surfers Paradise</span>
+<span class="bg-gradient-to-r from-primary to-fuchsia-300 bg-clip-text text-transparent">Surfers Paradise</span>
 </h1>
 <p class="mx-auto mb-10 max-w-2xl text-lg font-light leading-relaxed text-gray-300 sm:text-xl">
-                    Redefining nightlife with sophistication, allure, and a touch of gold. Experience the pinnacle of adult entertainment in a world-class setting.
+                    Redefining nightlife with sophistication, allure, and neon glamour. Experience the pinnacle of adult entertainment in a world-class setting.
                 </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 <a href="gallery.html" class="h-12 w-full sm:w-auto min-w-[160px] rounded-lg border border-white/20 bg-white/5 px-8 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40">
@@ -115,7 +139,7 @@
 <div class="container mx-auto max-w-4xl px-4 text-center">
 <span class="material-symbols-outlined mb-6 text-5xl text-primary/40">format_quote</span>
 <h2 class="text-3xl font-bold leading-snug tracking-tight text-white sm:text-4xl lg:text-5xl">
-                    “A sophisticated, fun, and lively party destination for premium nightlife in the heart of the Gold Coast.”
+                    “A sophisticated, fun, and lively party destination for premium nightlife in the heart of Surfers Paradise.”
                 </h2>
 <div class="mt-8 flex items-center justify-center gap-4">
 <div class="h-px w-12 bg-primary"></div>
@@ -135,10 +159,10 @@
 <span class="text-sm font-bold uppercase tracking-wider">The Vision</span>
 </div>
 <h3 class="text-3xl font-bold text-white sm:text-4xl">Bringing a New Level of Class</h3>
-<p class="text-lg leading-relaxed text-[#bab29c]">
+<p class="text-lg leading-relaxed text-[#d8b6cb]">
                             Mayfair Cabaret is not just a club; it is an immersive destination designed for the discerning guest who seeks a suave, high-end atmosphere. We have stripped away the clichés to reveal an experience rooted in elegance and sensuality.
                         </p>
-<p class="text-lg leading-relaxed text-[#bab29c]">
+<p class="text-lg leading-relaxed text-[#d8b6cb]">
                             Located in the beating heart of Surfers Paradise, our venue combines dark luxury aesthetics with world-class service, creating an environment where every night feels like a VIP event.
                         </p>
 <div class="pt-4">
@@ -162,36 +186,36 @@
 </div>
 </section>
 <!-- Feature Grid (Amenities) -->
-<section id="experience" class="bg-background-dark py-16 lg:py-24 border-y border-[#393528]/30">
+<section id="experience" class="bg-background-dark py-16 lg:py-24 border-y border-primary/10">
 <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="mb-16 text-center">
 <h2 class="text-3xl font-bold text-white sm:text-4xl">The Mayfair Experience</h2>
-<p class="mt-4 text-[#bab29c]">Everything you need for an unforgettable night out.</p>
+<p class="mt-4 text-[#d8b6cb]">Everything you need for an unforgettable night out.</p>
 </div>
 <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 <!-- Feature 1 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#2a261a] hover:-translate-y-1">
+<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#1c081b] hover:-translate-y-1">
 <div class="mb-6 flex size-14 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-surface-dark transition-colors">
 <span class="material-symbols-outlined text-3xl">local_bar</span>
 </div>
 <h3 class="mb-3 text-xl font-bold text-white">Premium Bar</h3>
-<p class="text-[#bab29c]">An extensive selection of top-shelf spirits, champagnes, and signature cocktails crafted by expert mixologists.</p>
+<p class="text-[#d8b6cb]">An extensive selection of top-shelf spirits, champagnes, and signature cocktails crafted by expert mixologists.</p>
 </div>
 <!-- Feature 2 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#2a261a] hover:-translate-y-1">
+<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#1c081b] hover:-translate-y-1">
 <div class="mb-6 flex size-14 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-surface-dark transition-colors">
 <span class="material-symbols-outlined text-3xl">diamond</span>
 </div>
 <h3 class="mb-3 text-xl font-bold text-white">Private rooms</h3>
-<p class="text-[#bab29c]">Exclusive private booths designed for intimacy and comfort away from public eye.</p>
+<p class="text-[#d8b6cb]">Exclusive private booths designed for intimacy and comfort away from public eye.</p>
 </div>
 <!-- Feature 3 -->
-<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#2a261a] hover:-translate-y-1">
+<div class="group relative overflow-hidden rounded-xl bg-surface-dark p-8 transition-all hover:bg-[#1c081b] hover:-translate-y-1">
 <div class="mb-6 flex size-14 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-surface-dark transition-colors">
 <span class="material-symbols-outlined text-3xl">music_note</span>
 </div>
 <h3 class="mb-3 text-xl font-bold text-white">Sexiest Entertainment</h3>
-<p class="text-[#bab29c]">Runway stage showcasing our beautiful girls all available for private bookings.</p>
+<p class="text-[#d8b6cb]">Runway stage showcasing our beautiful girls all available for private bookings.</p>
 </div>
 </div>
 </div>
@@ -217,11 +241,11 @@
 <span class="text-sm font-bold uppercase tracking-wider">The Talent</span>
 </div>
 <h3 class="text-3xl font-bold text-white sm:text-4xl">Queensland's Hottest Showgirls</h3>
-<p class="text-lg leading-relaxed text-[#bab29c]">
+<p class="text-lg leading-relaxed text-[#d8b6cb]">
                             Hottest talent available for private bookings or sit back and enjoy the main stage show while enjoying a cold beverage.
                         </p>
 <div class="pt-4">
-<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-surface-dark text-sm font-bold leading-normal tracking-wide hover:bg-yellow-400 transition-colors">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold leading-normal tracking-wide hover:bg-[#ff4db9] transition-colors">
                                 View Gallery
                             </button>
 </div>
@@ -231,22 +255,22 @@
 </section>
 <!-- Location CTA -->
 <section class="relative bg-background-dark py-20">
-<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at center, #393528 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 15% 20%, rgba(255,46,166,0.22) 0%, transparent 45%), radial-gradient(circle at 80% 30%, rgba(184,75,255,0.16) 0%, transparent 42%), radial-gradient(circle at 55% 85%, rgba(255,107,199,0.14) 0%, transparent 48%);"></div>
 <div class="relative container mx-auto max-w-5xl px-4 text-center">
 <h2 class="mb-6 text-3xl font-bold text-white sm:text-4xl">Find Us in Paradise</h2>
-<div class="mx-auto mb-10 h-64 w-full max-w-3xl overflow-hidden rounded-xl border border-[#393528]">
-<div class="h-full w-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Map view of Surfers Paradise location" data-location="Surfers Paradise, Gold Coast" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrkRfs9wOToKnOP1XELHpjlvSZImleCYvO5nqic069ybSFUeur4RJXlGGsgy1Z9VSH7EvCp_H8fSSfU5VfvLTby9TsFXnj8LlXy60NP12LdPiV2Pc_fO6lvXpIVbwcBvhgbIzrq7jEepqp8uktHf4EmogDaPBjY9r-GYEb7q7klEJ9AnNhs7ralC-XqiCSWJJMhTGBoRgWKcdPZdAi57xbg5r4LYXePjpT6fqLPG4nJe6hCaGon1bjTHODv6iluQeBZ5Dyme6f7JFm');"></div>
+<div class="mx-auto mb-10 h-64 w-full max-w-3xl overflow-hidden rounded-xl border border-primary/20">
+<div class="h-full w-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Map view of Surfers Paradise location" data-location="Surfers Paradise, Queensland" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrkRfs9wOToKnOP1XELHpjlvSZImleCYvO5nqic069ybSFUeur4RJXlGGsgy1Z9VSH7EvCp_H8fSSfU5VfvLTby9TsFXnj8LlXy60NP12LdPiV2Pc_fO6lvXpIVbwcBvhgbIzrq7jEepqp8uktHf4EmogDaPBjY9r-GYEb7q7klEJ9AnNhs7ralC-XqiCSWJJMhTGBoRgWKcdPZdAi57xbg5r4LYXePjpT6fqLPG4nJe6hCaGon1bjTHODv6iluQeBZ5Dyme6f7JFm');"></div>
 </div>
-<div class="flex flex-col items-center gap-6 rounded-2xl bg-surface-dark border border-[#393528] p-8 sm:p-12">
+<div class="flex flex-col items-center gap-6 rounded-2xl bg-surface-dark border border-primary/20 p-8 sm:p-12">
 <h3 class="text-2xl font-bold text-white">Ready for the Night of Your Life?</h3>
-<p class="max-w-xl text-center text-[#bab29c]">
-                        Secure your spot at the Gold Coast's newest hotspot. Book a private table or check our events calendar.
+<p class="max-w-xl text-center text-[#d8b6cb]">
+                        Secure your spot at Surfers Paradise’s newest hotspot. Book a private table or check our events calendar.
                     </p>
 <div class="flex flex-wrap justify-center gap-4">
                         <a href="contact.html" class="flex h-12 min-w-[160px] items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-background-dark transition-transform hover:scale-105">
                             Book a Table
                         </a>
-<a href="contact.html" class="flex h-12 min-w-[160px] items-center justify-center rounded-lg border border-[#393528] bg-transparent px-6 text-sm font-bold text-white hover:bg-white/5 transition-colors">
+<a href="contact.html" class="flex h-12 min-w-[160px] items-center justify-center rounded-lg border border-primary/20 bg-transparent px-6 text-sm font-bold text-white hover:bg-primary/10 hover:border-primary/40 transition-colors">
                             Contact Us
                         </a>
 </div>
@@ -254,7 +278,7 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-[#0a0908] border-t border-[#393528] pt-16 pb-8 px-4">
+<footer class="bg-background-dark border-t border-primary/20 pt-16 pb-8 px-4">
 <div class="max-w-[1280px] mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
 <!-- Brand -->
@@ -263,7 +287,7 @@
 <span class="material-symbols-outlined text-3xl">diamond</span>
 <span class="text-white text-xl font-bold uppercase tracking-wide">Mayfair Cabaret</span>
 </div>
-<p class="text-[#bab29c] text-sm leading-relaxed">
+<p class="text-[#d8b6cb] text-sm leading-relaxed">
                             The pinnacle of nightlife luxury. Experience the extraordinary.
                         </p>
 <div class="flex gap-4 mt-2">
@@ -279,34 +303,34 @@
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Explore</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="about.html">The Venue</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Entertainment</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="drinks.html">Bottle Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="entertainment.html">Events</a>
 </div>
 </div>
 <!-- Links 2 -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Support</h4>
 <div class="flex flex-col gap-2">
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#bab29c] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="contact.html">Contact Us</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Dress Code</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#d8b6cb] hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
 </div>
 </div>
 <!-- Location -->
 <div class="flex flex-col gap-4">
 <h4 class="text-white font-bold uppercase tracking-wider text-sm">Find Us</h4>
 <div class="aspect-video w-full rounded-lg bg-surface-dark overflow-hidden relative group">
-<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Gold Coast city streets at night" data-location="Gold Coast, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
+<div class="w-full h-full bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Map view of Surfers Paradise streets at night" data-location="Surfers Paradise, Australia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRTOXNv6icMGtIZ-Ap9fLKx9IOgAssJ6CiKcMqmkuRZWLO4VsANBPThCzDplqcZZikR6fDEmcz4KT4jKcakwWCaFkof_ZtAlU8_yhG8MNCxM_ukSi3x6CiPwPBJmMkAkEOMwK7YV1Ib9dVxvFzApFsl_KuHdAr1tqfIWc6ZIxn0oYeeeSAFVcGM4yuHsn6KgKUVrRvpcObauukfBgEuDL2A23Mb8Zid67mIIr-gmUcx0vNph7fsUMQ_yG0h1_0UEUgOcg5l_MrOPgt");'>
 </div>
 <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
 <span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
 </div>
 </div>
-<p class="text-[#bab29c] text-xs">
-                             Former Melba’s Hotel, Surfers Paradise, Gold Coast
+<p class="text-[#d8b6cb] text-xs">
+                             Former Melba’s Hotel, Surfers Paradise, Queensland
                          </p>
 </div>
 </div>
@@ -315,8 +339,8 @@
 <span>© 2024 Mayfair Cabaret. All rights reserved.</span>
 <span class="text-white/10">|</span>
 <span class="relative inline-flex items-center gap-1">
-<a class="text-[#bab29c] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
-<button class="text-[#bab29c] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
+<a class="text-[#d8b6cb] hover:text-primary transition-colors text-xs cursor-pointer" href="https://thefreewebsitewizards.com/" target="_blank" rel="noopener noreferrer">Made by The Free Website</a>
+<button class="text-[#d8b6cb] hover:text-primary transition-colors cursor-pointer inline-flex items-center" type="button" data-copy-url="https://thefreewebsitewizards.com/" aria-label="Copy The Free Website link">
 <span class="material-symbols-outlined text-sm">content_copy</span>
 </button>
 <span class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black/80 px-2 py-1 text-[10px] text-white opacity-0 transition-opacity" data-copy-tooltip>Link copied</span>
@@ -324,14 +348,14 @@
 </p>
 <div class="flex items-center gap-2 px-3 py-1 rounded bg-white/5 border border-white/10">
 <span class="material-symbols-outlined text-white/50 text-sm">18_up_rating</span>
-<span class="text-[#bab29c] text-xs font-medium">18+ Only. ID Required.</span>
+<span class="text-[#d8b6cb] text-xs font-medium">18+ Only. ID Required.</span>
 </div>
 </div>
 </div>
 </footer>
 </div>
 <script>
-(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#12100e] border-l border-[#393528] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
+(function(){var i=document.querySelector(".lg\\:hidden .material-symbols-outlined");if(!i)return;i.classList.add("cursor-pointer");i.style.transition="transform 300ms ease";var o=document.getElementById("mobile-menu-overlay");if(!o){o=document.createElement("div");o.id="mobile-menu-overlay";o.className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden";var e=document.createElement("div");e.id="mobile-menu-panel";e.className="absolute right-0 top-0 h-full w-64 bg-[#09030d] border-l border-[#2b0f24] p-6 transform transition-transform duration-300 translate-x-full";var t=document.createElement("nav");t.className="flex flex-col gap-4";[{href:"index.html",text:"Home"},{href:"about.html",text:"About"},{href:"entertainment.html",text:"Entertainment"},{href:"drinks.html",text:"Drinks"},{href:"pricing.html",text:"Pricing"},{href:"vip.html",text:"VIP"},{href:"gallery.html",text:"Gallery"},{href:"contact.html",text:"Contact"}].forEach(function(n){var a=document.createElement("a");a.href=n.href;a.textContent=n.text;a.className="text-white/80 hover:text-primary transition-colors text-sm font-medium tracking-wide";t.appendChild(a)});e.appendChild(t);o.appendChild(e);document.body.appendChild(o)}var l=document.getElementById("mobile-menu-panel"),s=function(){o.classList.remove("hidden");requestAnimationFrame(function(){l.classList.remove("translate-x-full")});i.textContent="close";i.style.transform="rotate(90deg)"},r=function(){l.classList.add("translate-x-full");setTimeout(function(){o.classList.add("hidden");i.textContent="menu";i.style.transform="rotate(0deg)"},300)};i.addEventListener("click",function(){o.classList.contains("hidden")?s():r()});o.addEventListener("click",function(n){n.target===o&&r()});l.querySelectorAll("a").forEach(function(n){n.addEventListener("click",function(){r()})})})();
 </script>
 <script>
 (function(){var e="https://thefreewebsitewizards.com/";var t=function(o){var n=document.createElement("textarea");n.value=o;n.setAttribute("readonly","");n.style.position="absolute";n.style.left="-9999px";document.body.appendChild(n);n.select();document.execCommand("copy");document.body.removeChild(n)};document.querySelectorAll("[data-copy-url]").forEach(function(o){o.addEventListener("click",function(){var n=o.getAttribute("data-copy-url")||e;var i=o.closest("[data-copy-tooltip]")||o.parentElement&&o.parentElement.querySelector("[data-copy-tooltip]");var r=function(){if(i){i.style.opacity="1";clearTimeout(i.__hideTimer);i.__hideTimer=setTimeout(function(){i.style.opacity="0"},1200)}};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(r).catch(function(){t(n);r()})}else{t(n);r()}})})})();
